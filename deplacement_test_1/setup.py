@@ -11,7 +11,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', ['launch/deplacement_call.launch.py']),
-        ('share/' + package_name = '/config', ['config/test_goal_publishers_config.yaml']),
+        ('share/' + package_name + '/config', ['config/test_goal_publishers_config.yaml']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
