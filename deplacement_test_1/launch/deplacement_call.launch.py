@@ -9,6 +9,7 @@ def generate_launch_description():
     position_goals = PathJoinSubstitution(
         [
             FindPackageShare("deplacement_test_1"),
+            "config",
             "test_goal_publishers_config.yaml",
         ]
     )
