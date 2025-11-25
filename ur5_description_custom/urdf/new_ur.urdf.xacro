@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://wiki.ros.org/xacro" name="$(arg name)">
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur5_avec_effecteur">
    <!-- robot name parameter -->
-   <xacro:arg name="name" default="ur5_with_pen"/>
+   <!--xacro:arg name="name" default="ur5_with_pen"/-->
 
    <!-- import main macro -->
    <xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro"/>
