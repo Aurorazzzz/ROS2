@@ -52,7 +52,7 @@
 
    <!-- arm -->
    <xacro:ur_robot
-     name="$(arg name)"
+     name="ur5_avec_effecteur"
      tf_prefix="$(arg tf_prefix)"
      parent="table_link"
      joint_limits_parameters_file="$(arg joint_limit_params)"
