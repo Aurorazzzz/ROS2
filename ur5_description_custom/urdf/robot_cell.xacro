@@ -57,6 +57,32 @@
       <origin xyz="0 0 0" rpy="0 0 0" />
     </xacro:ur_robot>
 
+    <link name="pen_link">
+     <visual>
+       <origin xyz="0 0 0.135" rpy="0 0 0"/>
+       <geometry>
+         <cylinder radius="0.1" length="0.270"/>
+       </geometry>
+       <material name="blue">
+         <color rgba="0.2 0.2 0.8 1.0"/>
+       </material>
+     </visual>
+     <collision>
+       <origin xyz="0 0 0.135" rpy="0 0 0"/>
+       <geometry>
+         <cylinder radius="0.1" length="0.27"/>
+       </geometry>
+     </collision>
+   </link>
+
+
+   <joint name="pen_fixed_joint" type="fixed">
+     <parent link="ur5_tool0"/>
+     
+     <child  link="pen_link"/>
+     <!-- ajustez xyz/rpy pour que le stylo corresponde à la réalité -->
+     <origin xyz="0 0 0" rpy="0 0 0"/>
+   </joint>
 
 
   </xacro:macro>
