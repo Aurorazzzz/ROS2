@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="robot_cell" xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find my_robot_cell_description)/urdf/my_robot_cell_macro.xacro"/>
+  <xacro:include filename="$(find ur5_description_custom)/urdf/robot_cell.xacro"/>
 
   <xacro:arg name="ur_type" default="ur20"/>
   <xacro:arg name="joint_limits_parameters_file" default="$(find ur_description)/config/$(arg ur_type)/joint_limits.yaml"/>
