@@ -75,7 +75,7 @@
    </link>
 
    <joint name="pen_fixed_joint" type="fixed">
-     <parent link="$tool0"/>
+     <parent link="tool0"/>
      <child  link="pen_link"/>
      <!-- ajustez xyz/rpy pour que le stylo corresponde à la réalité -->
      <origin xyz="0 0 0" rpy="0 0 0"/>
