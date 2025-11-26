@@ -6,6 +6,7 @@
     parent
     *origin
     ur_type
+    tf_prefix
     joint_limits_parameters_file
     kinematics_parameters_file
     physical_parameters_file
@@ -75,7 +76,8 @@
    </link>
 
    <joint name="pen_fixed_joint" type="fixed">
-     <parent link="tool0"/>
+     <parent link="${tf_prefix}tool0"/>
+     
      <child  link="pen_link"/>
      <!-- ajustez xyz/rpy pour que le stylo corresponde à la réalité -->
      <origin xyz="0 0 0" rpy="0 0 0"/>
