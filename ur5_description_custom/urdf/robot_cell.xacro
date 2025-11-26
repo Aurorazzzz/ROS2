@@ -30,7 +30,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 -0.5" rpy="0 0 0"/>
       <geometry>
         <box size="0.8 0.8 1.0"/>
       </geometry>
@@ -41,7 +41,7 @@
     <joint name="base_to_robot_mount" type="fixed">
       <parent link="table"/>
       <child link="robot_mount"/>
-      <origin xyz="0 0 0.5" rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
     </joint>
 
     <!--This will create the specific robot-->
