@@ -9,4 +9,4 @@ ros2 topic pub --once /joint_trajectory_controller/joint_trajectory \
   ]
 }"
 
-Salut c'est Théo
+Salut c'est Théo ettdtd
