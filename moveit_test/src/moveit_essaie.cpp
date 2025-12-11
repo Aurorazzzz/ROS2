@@ -1,4 +1,6 @@
 #include <memory>
+#include <thread>
+#include <chrono>
 
 #include <rclcpp/rclcpp.hpp>
 #include <geometry_msgs/msg/pose.hpp>
@@ -14,22 +16,41 @@ int main(int argc, char * argv[])
     rclcpp::NodeOptions().automatically_declare_parameters_from_overrides(true)
   );
 
-  // Logger ROS
   auto const logger = rclcpp::get_logger("hello_moveit");
+
+  // -----------------------------
+  //   Executor pour faire tourner le node
+  // -----------------------------
+  rclcpp::executors::SingleThreadedExecutor executor;
+  executor.add_node(node);
+
+  std::thread spinner([&executor]() {
+    executor.spin();
+  });
 
   // Interface MoveIt
   using moveit::planning_interface::MoveGroupInterface;
   MoveGroupInterface move_group_interface(node, "ur_manipulator");
 
-  // On fixe le repère de référence des poses de l'EEF
   move_group_interface.setPoseReferenceFrame("base_link");
-
-  // Optionnel : on peut réduire un peu la vitesse max
+  move_group_interface.setPlanningTime(5.0);
   move_group_interface.setMaxVelocityScalingFactor(0.3);
   move_group_interface.setMaxAccelerationScalingFactor(0.3);
 
+  // Laisser un peu de temps pour que le state monitor reçoive les premiers joint_states
+  RCLCPP_INFO(logger, "Attente de l'état courant du robot...");
+  auto current_state = move_group_interface.getCurrentState(10.0);
+  if (!current_state) {
+    RCLCPP_ERROR(logger, "Impossible de récupérer l'état courant du robot (timeout).");
+    executor.cancel();
+    spinner.join();
+    rclcpp::shutdown();
+    return 1;
+  }
+  RCLCPP_INFO(logger, "État courant du robot reçu.");
+
   // -----------------------------
-  //         Point 1 (p1)
+  //          Point 1 (p1)
   // -----------------------------
   geometry_msgs::msg::Pose p1;
   p1.orientation.x = 0.0;
@@ -50,6 +71,8 @@ int main(int argc, char * argv[])
 
   if (plan_result != moveit::planning_interface::MoveItErrorCode::SUCCESS) {
     RCLCPP_ERROR(logger, "Impossible de planifier un mouvement vers p1, arrêt du programme.");
+    executor.cancel();
+    spinner.join();
     rclcpp::shutdown();
     return 1;
   }
@@ -58,19 +81,23 @@ int main(int argc, char * argv[])
   auto exec_result = move_group_interface.execute(plan_to_p1);
   if (exec_result != moveit::planning_interface::MoveItErrorCode::SUCCESS) {
     RCLCPP_ERROR(logger, "Échec de l'exécution du plan vers p1, arrêt du programme.");
+    executor.cancel();
+    spinner.join();
     rclcpp::shutdown();
     return 1;
   }
 
   RCLCPP_INFO(logger, "Robot positionné en p1 (approximativement).");
 
+  // On laisse un petit délai pour que le state monitor se mette à jour après le mouvement
+  std::this_thread::sleep_for(std::chrono::milliseconds(200));
+  move_group_interface.setStartStateToCurrentState();
+
   // -----------------------------
-  //     Définition des waypoints
-  //     à partir de la pose courante
+  //  Waypoints à partir de la pose courante
   // -----------------------------
   std::vector<geometry_msgs::msg::Pose> waypoints;
 
-  // Pose de départ = pose courante de l'EEF après le mouvement vers p1
   geometry_msgs::msg::Pose start_pose = move_group_interface.getCurrentPose().pose;
 
   // Point 2 : décalage en Y
@@ -87,7 +114,7 @@ int main(int argc, char * argv[])
   //   Calcul de la trajectoire cartésienne
   // -----------------------------------
   moveit_msgs::msg::RobotTrajectory trajectory;
-  const double eef_step = 0.01;    // 1 cm de résolution
+  const double eef_step = 0.01;    // 1 cm
   const double jump_thresh = 0.0;  // pas de détection de "jumps"
 
   double fraction = move_group_interface.computeCartesianPath(
@@ -106,6 +133,7 @@ int main(int argc, char * argv[])
     RCLCPP_INFO(logger,
       "Trajectoire cartésienne planifiée avec succès (%.1f%% du chemin). Exécution...",
       fraction * 100.0);
+
     auto exec_result_cart = move_group_interface.execute(trajectory);
     if (exec_result_cart != moveit::planning_interface::MoveItErrorCode::SUCCESS) {
       RCLCPP_ERROR(logger, "Échec de l'exécution de la trajectoire cartésienne.");
@@ -117,7 +145,9 @@ int main(int argc, char * argv[])
       fraction * 100.0);
   }
 
-  // Arrêt de ROS2
+  // Arrêt propre
+  executor.cancel();
+  spinner.join();
   rclcpp::shutdown();
   return 0;
 }
