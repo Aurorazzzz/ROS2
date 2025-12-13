@@ -51,9 +51,9 @@ int main(int argc, char * argv[])
 
   RCLCPP_INFO(logger,
   "EE pose: x=%.3f y=%.3f z=%.3f x=%.3f y=%.3f z=%.3f w=%.3f",
-  current_state.pose.position.x,
-  current_state.pose.position.y,
-  current_state.pose.position.z,
+  current_state.position.x,
+  current_state.position.y,
+  current_state.position.z,
   current_state.pose.orientation.x,
   current_state.pose.orientation.y,
   current_state.pose.orientation.z,
