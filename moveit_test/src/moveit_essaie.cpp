@@ -48,17 +48,12 @@ int main(int argc, char * argv[])
     return 1;
   }
   RCLCPP_INFO(logger, "État courant du robot reçu.");
-
+  auto pose = move_group_interface.getCurrentPose();
   RCLCPP_INFO(logger,
-  "EE pose: x=%.3f y=%.3f z=%.3f x=%.3f y=%.3f z=%.3f w=%.3f",
-  current_state.position.x,
-  current_state.position.y,
-  current_state.position.z,
-  current_state.pose.orientation.x,
-  current_state.pose.orientation.y,
-  current_state.pose.orientation.z,
-  current_state.pose.orientation.w
-);
+  "EE pose: x=%.3f y=%.3f z=%.3f",
+  pose.pose.position.x,
+  pose.pose.position.y,
+  pose.pose.position.z);
 
   // -----------------------------
   //          Point 1 (p1)
