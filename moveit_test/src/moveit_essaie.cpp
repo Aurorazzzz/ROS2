@@ -54,8 +54,8 @@ int main(int argc, char * argv[])
   pose.pose.position.x,
   pose.pose.position.y,
   pose.pose.position.z,
-  pose.pose.orientation.x
-  pose.pose.orientation.y
+  pose.pose.orientation.x,
+  pose.pose.orientation.y,
   pose.pose.orientation.z,
   pose.pose.orientation.w);
 
