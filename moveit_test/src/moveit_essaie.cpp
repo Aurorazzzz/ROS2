@@ -53,7 +53,11 @@ int main(int argc, char * argv[])
   "EE pose: x=%.3f y=%.3f z=%.3f",
   pose.pose.position.x,
   pose.pose.position.y,
-  pose.pose.position.z);
+  pose.pose.position.z,
+  pose.pose.orientation.x
+  pose.pose.orientation.y
+  pose.pose.orientation.z,
+  pose.pose.orientation.w);
 
   // -----------------------------
   //          Point 1 (p1)
@@ -63,9 +67,9 @@ int main(int argc, char * argv[])
   p1.orientation.y = 0.0;
   p1.orientation.z = 0.0;
   p1.orientation.w = 1.0;   // orientation identité
-  p1.position.x = 0.28;
-  p1.position.y = -0.20;
-  p1.position.z = 0.50;
+  p1.position.x = -0.487;
+  p1.position.y = -0.109;
+  p1.position.z = 0.433;
 
   // -----------------------------
   //   Aller à p1 avec un plan normal
