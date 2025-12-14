@@ -22,8 +22,26 @@ ament_target_dependencies(
   "rclcpp"
 )
 
-install(TARGETS moveit_essaie
+add_executable(triangle src/triangle.cpp)
+target_include_directories(triangle PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>)
+target_compile_features(triangle PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+ament_target_dependencies(
+  triangle
+  "moveit_ros_planning_interface"
+  "rclcpp"
+)
+
+install(TARGETS 
+moveit_essaie
+triangle 
   DESTINATION lib/${PROJECT_NAME})
+
+install(
+  DIRECTORY data/
+  DESTINATION share/${PROJECT_NAME}/data
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
