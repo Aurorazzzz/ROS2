@@ -63,10 +63,10 @@ int main(int argc, char * argv[])
   //          Point 1 (p1)
   // -----------------------------
   geometry_msgs::msg::Pose p1;
-  p1.orientation.x = 0.707;
-  p1.orientation.y = 0.707;
-  p1.orientation.z = -0.001;
-  p1.orientation.w = -0.001;   // orientation identité
+  p1.orientation.x = -0.675;
+  p1.orientation.y = 0.147;
+  p1.orientation.z = -0.140;
+  p1.orientation.w = 0.709;   // orientation identité
   p1.position.x = -0.487;
   p1.position.y = 0.109;
   p1.position.z = 0.433;
