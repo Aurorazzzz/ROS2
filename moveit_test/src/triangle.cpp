@@ -163,12 +163,6 @@ try {
   // On recupere la pose actuelle
   geometry_msgs::msg::Pose start_pose = move_group_interface.getCurrentPose().pose;
 
-  
-  // Point 2 : décalage en Y
-  geometry_msgs::msg::Pose p2 = start_pose;
-  p2.position.y -= 0.10;   // -10 cm en Y
-  waypoints.push_back(p2);
-
 
   for (size_t i = 0; i < (points2d.size()); ++i) {
     geometry_msgs::msg::Pose p = start_pose;
@@ -178,6 +172,41 @@ try {
                 i, points2d[i].u, points2d[i].v, points2d[i].pen ? 1 : 0);
      waypoints.push_back(p); 
      start_pose = p;
+  }
+
+    // -----------------------------------
+  //   Calcul de la trajectoire cartésienne
+  // -----------------------------------
+  moveit_msgs::msg::RobotTrajectory trajectory;
+  const double eef_step = 0.01;    // 1 cm
+  const double jump_thresh = 0.0;  // pas de détection de "jumps"
+
+  double fraction = move_group_interface.computeCartesianPath(
+    waypoints,
+    eef_step,
+    jump_thresh,
+    trajectory
+  );
+
+  RCLCPP_INFO(logger, "Fraction cartésienne trouvée : %.1f%%", fraction * 100.0);
+
+  // -----------------------------------
+  //   Exécution de la trajectoire
+  // -----------------------------------
+  if (fraction > 0.95) {
+    RCLCPP_INFO(logger,
+      "Trajectoire cartésienne planifiée avec succès (%.1f%% du chemin). Exécution...",
+      fraction * 100.0);
+
+    auto exec_result_cart = move_group_interface.execute(trajectory);
+    if (exec_result_cart != moveit::planning_interface::MoveItErrorCode::SUCCESS) {
+      RCLCPP_ERROR(logger, "Échec de l'exécution de la trajectoire cartésienne.");
+    }
+  } else {
+    RCLCPP_ERROR(
+      logger,
+      "Échec de la planification cartésienne, seulement %.1f%% du chemin trouvé.",
+      fraction * 100.0);
   }
 
   // Arrêt propre
