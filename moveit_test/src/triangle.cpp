@@ -130,8 +130,10 @@ RCLCPP_ERROR(node->get_logger(), "Paramètre 'csv_path' vide. Exemple: --ros-arg
 return 1;
 }
 
+std::vector<UVPen> points2d;
+
 try {
-  auto points2d = load_uvpen_csv(csv_path);
+  points2d = load_uvpen_csv(csv_path);
   RCLCPP_INFO(node->get_logger(), "Chargé %zu points depuis %s", points2d.size(), csv_path.c_str());
 
   // Exemple: afficher les 3 premiers
