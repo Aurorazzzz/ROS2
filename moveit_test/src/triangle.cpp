@@ -125,7 +125,6 @@ int main(int argc, char * argv[])
 
 auto share = ament_index_cpp::get_package_share_directory("moveit_test");
 auto csv_path = share + "/data/waypoint_triangle.csv";
-std::string csv_path = node->declare_parameter<std::string>("csv_path", "");
 if (csv_path.empty()) {
 RCLCPP_ERROR(node->get_logger(), "Paramètre 'csv_path' vide. Exemple: --ros-args -p csv_path:=/chemin/triangle.csv");
 return 1;
