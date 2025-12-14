@@ -10,6 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(xacro REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(ament_index_cpp REQUIRED)
 
 add_executable(moveit_essaie src/moveit_essaie.cpp)
 target_include_directories(moveit_essaie PUBLIC
@@ -31,6 +32,7 @@ ament_target_dependencies(
   triangle
   "moveit_ros_planning_interface"
   "rclcpp"
+  "ament_index_cpp"
 )
 
 install(TARGETS 
