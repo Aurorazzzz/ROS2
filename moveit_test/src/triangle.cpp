@@ -171,7 +171,7 @@ try {
     RCLCPP_INFO(node->get_logger(), "[%zu] u=%.4f v=%.4f pen=%d",
                 i, points2d[i].u, points2d[i].v, points2d[i].pen ? 1 : 0);
      waypoints.push_back(p); 
-     start_pose = p;
+     //start_pose = p;
   }
 
     // -----------------------------------
