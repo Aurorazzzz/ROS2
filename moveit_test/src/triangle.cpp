@@ -141,7 +141,46 @@ try {
   }
 } catch (const std::exception& e) {
   RCLCPP_ERROR(node->get_logger(), "Erreur lecture CSV: %s", e.what());
+  executor.cancel();
+  spinner.join();
+  rclcpp::shutdown();
   return 1;
 }
 
+  std::this_thread::sleep_for(std::chrono::milliseconds(200));
+  // definir le départ du prochain plan = position actuel
+  move_group_interface.setStartStateToCurrentState();
+
+  // -----------------------------
+  //  Waypoints à partir de la pose courante
+  // -----------------------------
+
+  // Creation d'un waypoint (qui est a priori un vecteur de Pose)
+  std::vector<geometry_msgs::msg::Pose> waypoints;
+
+  // On recupere la pose actuelle
+  geometry_msgs::msg::Pose start_pose = move_group_interface.getCurrentPose().pose;
+
+  
+  // Point 2 : décalage en Y
+  geometry_msgs::msg::Pose p2 = start_pose;
+  p2.position.y -= 0.10;   // -10 cm en Y
+  waypoints.push_back(p2);
+
+
+  for (size_t i = 0; i < (points2d.size()); ++i) {
+    geometry_msgs::msg::Pose p = start_pose;
+    p.position.y +=  points2d[i].u;
+    p.position.z +=  points2d[i].v;
+    RCLCPP_INFO(node->get_logger(), "[%zu] u=%.4f v=%.4f pen=%d",
+                i, points2d[i].u, points2d[i].v, points2d[i].pen ? 1 : 0);
+     waypoints.push_back(p); 
+     start_pose = p;
+  }
+
+  // Arrêt propre
+  executor.cancel();
+  spinner.join();
+  rclcpp::shutdown();
+  return 0;
   }
