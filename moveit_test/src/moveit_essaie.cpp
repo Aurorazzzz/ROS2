@@ -67,8 +67,8 @@ int main(int argc, char * argv[])
   p1.orientation.y = 0.147;
   p1.orientation.z = -0.140;
   p1.orientation.w = 0.709;   // orientation identité
-  p1.position.x = -0.487;
-  p1.position.y = 0.109;
+  p1.position.x = -0.07;
+  p1.position.y = 0.759;
   p1.position.z = 0.433;
 
   // -----------------------------
