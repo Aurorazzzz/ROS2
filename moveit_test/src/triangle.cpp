@@ -12,6 +12,8 @@
 #include <geometry_msgs/msg/pose.hpp>
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <moveit_msgs/msg/robot_trajectory.hpp>
+#include <ament_index_cpp/get_package_share_directory.hpp>
+
 
 
 struct UVPen {
