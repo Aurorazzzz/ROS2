@@ -162,12 +162,12 @@ try {
 
   // On recupere la pose actuelle
   geometry_msgs::msg::Pose start_pose = move_group_interface.getCurrentPose().pose;
-
+  waypoints.push_back(start_pose); 
 
   for (size_t i = 0; i < (points2d.size()); ++i) {
     geometry_msgs::msg::Pose p = start_pose;
     p.position.x +=  points2d[i].u;
-    p.position.y +=  points2d[i].v;
+    p.position.z +=  points2d[i].v;
     RCLCPP_INFO(node->get_logger(), "[%zu] u=%.4f v=%.4f pen=%d",
                 i, points2d[i].u, points2d[i].v, points2d[i].pen ? 1 : 0);
      waypoints.push_back(p); 
