@@ -65,8 +65,8 @@ int main(int argc, char * argv[])
   geometry_msgs::msg::Pose p1;
   p1.orientation.x = 0.707;
   p1.orientation.y = 0.707;
-  p1.orientation.z = 0.0;
-  p1.orientation.w = 0.0;   // orientation identité
+  p1.orientation.z = -0.001;
+  p1.orientation.w = -0.001;   // orientation identité
   p1.position.x = -0.487;
   p1.position.y = 0.109;
   p1.position.z = 0.433;
