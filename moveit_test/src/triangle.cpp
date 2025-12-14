@@ -173,7 +173,7 @@ try {
      waypoints.push_back(p); 
      //start_pose = p;
   }
-
+    waypoints.push_back(start_pose); 
     // -----------------------------------
   //   Calcul de la trajectoire cartésienne
   // -----------------------------------
