@@ -1,0 +1,2 @@
+Invoking command in '/home/insa/ros_ws/src/build/moveit_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake --build /home/insa/ros_ws/src/build/moveit_test -- -j4 -l4
+Invoked command in '/home/insa/ros_ws/src/build/moveit_test' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake --build /home/insa/ros_ws/src/build/moveit_test -- -j4 -l4

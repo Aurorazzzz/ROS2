@@ -1,0 +1,101 @@
+[0.074s] Invoking command in '/home/insa/ros_ws/src/build/moveit_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake /home/insa/ros_ws/src/moveit_test -DCMAKE_INSTALL_PREFIX=/home/insa/ros_ws/src/install/moveit_test
+[1.296s] -- The C compiler identification is GNU 11.4.0
+[2.177s] -- The CXX compiler identification is GNU 11.4.0
+[2.226s] -- Detecting C compiler ABI info
+[2.646s] -- Detecting C compiler ABI info - done
+[2.674s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.676s] -- Detecting C compile features
+[2.679s] -- Detecting C compile features - done
+[2.695s] -- Detecting CXX compiler ABI info
+[3.082s] -- Detecting CXX compiler ABI info - done
+[3.110s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.111s] -- Detecting CXX compile features
+[3.113s] -- Detecting CXX compile features - done
+[3.192s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[4.018s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[4.815s] -- Found xacro: 2.1.1 (/opt/ros/humble/share/xacro/cmake)
+[4.847s] -- Found moveit_ros_planning_interface: 2.5.9 (/opt/ros/humble/share/moveit_ros_planning_interface/cmake)
+[5.963s] -- Found Boost: /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time filesystem program_options system thread 
+[6.508s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[6.582s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[6.679s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[6.805s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.964s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[8.522s] -- Found Boost: /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[9.088s] -- Found parameter_traits: 0.5.0 (/opt/ros/humble/share/parameter_traits/cmake)
+[9.571s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[9.609s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[10.342s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[10.578s] -- Found FastRTPS: /opt/ros/humble/include  
+[11.018s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[11.130s] -- Found Threads: TRUE  
+[11.517s] -- Found rclcpp_lifecycle: 16.0.15 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[11.719s] -- Found Boost: /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: filesystem 
+[12.556s] -- library: /usr/lib/aarch64-linux-gnu/libcurl.so
+[12.798s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[12.799s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[14.079s] -- Found Boost: /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread chrono 
+[14.257s] -- Found Boost: /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: thread system filesystem regex date_time program_options 
+[14.401s] -- Found Boost: /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system filesystem date_time program_options thread 
+[14.595s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[15.140s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[15.141s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/insa/ros_ws/src/moveit_test/include>
+[15.141s] -- Configured cppcheck exclude dirs and/or files: 
+[15.147s] -- Added test 'lint_cmake' to check CMake code style
+[15.155s] -- Added test 'uncrustify' to check C / C++ code style
+[15.155s] -- Configured uncrustify additional arguments: 
+[15.159s] -- Added test 'xmllint' to check XML markup files
+[15.173s] -- Configuring done
+[15.376s] -- Generating done
+[15.407s] -- Build files have been written to: /home/insa/ros_ws/src/build/moveit_test
+[15.474s] Invoked command in '/home/insa/ros_ws/src/build/moveit_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake /home/insa/ros_ws/src/moveit_test -DCMAKE_INSTALL_PREFIX=/home/insa/ros_ws/src/install/moveit_test
+[15.489s] Invoking command in '/home/insa/ros_ws/src/build/moveit_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake --build /home/insa/ros_ws/src/build/moveit_test -- -j4 -l4
+[15.732s] [ 50%] [32mBuilding CXX object CMakeFiles/moveit_essaie.dir/src/moveit_essaie.cpp.o[0m
+[41.371s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[41.375s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:72:67:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[41.377s]    72 | (plan_result != moveit::planning_interface::MoveItErrorCode::[01;35m[KSUCCESS[m[K) {
+[41.379s]       |                                                              [01;35m[K^~~~~~~[m[K
+[41.380s] 
+[41.380s] In file included from [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:7[m[K:
+[41.381s] [01m[K/opt/ros/humble/include/moveit/move_group_interface/move_group_interface.h:71:7:[m[K [01;36m[Knote: [m[Kdeclared here
+[41.381s]    71 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+[41.382s]       |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[41.383s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:82:67:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[41.383s]    82 | (exec_result != moveit::planning_interface::MoveItErrorCode::[01;35m[KSUCCESS[m[K) {
+[41.384s]       |                                                              [01;35m[K^~~~~~~[m[K
+[41.384s] 
+[41.385s] In file included from [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:7[m[K:
+[41.385s] [01m[K/opt/ros/humble/include/moveit/move_group_interface/move_group_interface.h:71:7:[m[K [01;36m[Knote: [m[Kdeclared here
+[41.386s]    71 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+[41.386s]       |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[41.394s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:138:74:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[41.395s]   138 | _result_cart != moveit::planning_interface::MoveItErrorCode::[01;35m[KSUCCESS[m[K) {
+[41.396s]       |                                                              [01;35m[K^~~~~~~[m[K
+[41.396s] 
+[41.396s] In file included from [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:7[m[K:
+[41.397s] [01m[K/opt/ros/humble/include/moveit/move_group_interface/move_group_interface.h:71:7:[m[K [01;36m[Knote: [m[Kdeclared here
+[41.397s]    71 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+[41.398s]       |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[54.147s] [100%] [32m[1mLinking CXX executable moveit_essaie[0m
+[57.227s] [100%] Built target moveit_essaie
+[57.369s] Invoked command in '/home/insa/ros_ws/src/build/moveit_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake --build /home/insa/ros_ws/src/build/moveit_test -- -j4 -l4
+[57.476s] Invoking command in '/home/insa/ros_ws/src/build/moveit_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake --install /home/insa/ros_ws/src/build/moveit_test
+[57.541s] -- Install configuration: ""
+[57.564s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/lib/moveit_test/moveit_essaie
+[57.574s] -- Set runtime path of "/home/insa/ros_ws/src/install/moveit_test/lib/moveit_test/moveit_essaie" to ""
+[57.588s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/ament_index/resource_index/package_run_dependencies/moveit_test
+[57.598s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/ament_index/resource_index/parent_prefix_path/moveit_test
+[57.621s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/moveit_test/environment/ament_prefix_path.sh
+[57.626s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/moveit_test/environment/ament_prefix_path.dsv
+[57.631s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/moveit_test/environment/path.sh
+[57.634s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/moveit_test/environment/path.dsv
+[57.638s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/moveit_test/local_setup.bash
+[57.643s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/moveit_test/local_setup.sh
+[57.645s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/moveit_test/local_setup.zsh
+[57.653s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/moveit_test/local_setup.dsv
+[57.658s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/moveit_test/package.dsv
+[57.667s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/ament_index/resource_index/packages/moveit_test
+[57.671s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/moveit_test/cmake/moveit_testConfig.cmake
+[57.674s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/moveit_test/cmake/moveit_testConfig-version.cmake
+[57.685s] -- Installing: /home/insa/ros_ws/src/install/moveit_test/share/moveit_test/package.xml
+[57.716s] Invoked command in '/home/insa/ros_ws/src/build/moveit_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake --install /home/insa/ros_ws/src/build/moveit_test

@@ -1,0 +1,435 @@
+[0.000000] (-) TimerEvent: {}
+[0.001630] (-) JobUnselected: {'identifier': 'deplacement_test_1'}
+[0.001760] (-) JobUnselected: {'identifier': 'ur5_description_custom'}
+[0.001848] (moveit_test) JobQueued: {'identifier': 'moveit_test', 'dependencies': OrderedDict()}
+[0.001934] (moveit_test) JobStarted: {'identifier': 'moveit_test'}
+[0.072328] (moveit_test) JobProgress: {'identifier': 'moveit_test', 'progress': 'cmake'}
+[0.079503] (moveit_test) JobProgress: {'identifier': 'moveit_test', 'progress': 'build'}
+[0.083417] (moveit_test) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/insa/ros_ws/src/build/moveit_test', '--', '-j4', '-l4'], 'cwd': '/home/insa/ros_ws/src/build/moveit_test', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'insa'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/insa'), ('OLDPWD', '/home/insa'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1494'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/insa/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'insa'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'insa'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/insa-desktop:@/tmp/.ICE-unix/1157,unix/insa-desktop:/tmp/.ICE-unix/1157'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/37a002b2_54d5_417a_84a5_67dc6c30bb10'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.PBMCH3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.95'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/insa/ros_ws/install/ur5_description_custom:/home/insa/ros_ws/install/moveit_test:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/insa/ros_ws/src/build/moveit_test'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/insa/ros_ws/install/deplacement_test_1/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/insa/ros_ws/install/ur5_description_custom:/home/insa/ros_ws/install/moveit_test:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble')]), 'shell': False}
+[0.099371] (-) TimerEvent: {}
+[0.201840] (-) TimerEvent: {}
+[0.302898] (-) TimerEvent: {}
+[0.403927] (-) TimerEvent: {}
+[0.504974] (-) TimerEvent: {}
+[0.605842] (-) TimerEvent: {}
+[0.706750] (-) TimerEvent: {}
+[0.730211] (moveit_test) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target moveit_essaie\x1b[0m\n'}
+[0.807056] (-) TimerEvent: {}
+[0.908140] (-) TimerEvent: {}
+[1.009186] (-) TimerEvent: {}
+[1.047078] (moveit_test) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/moveit_essaie.dir/src/moveit_essaie.cpp.o\x1b[0m\n'}
+[1.109446] (-) TimerEvent: {}
+[1.210757] (-) TimerEvent: {}
+[1.312048] (-) TimerEvent: {}
+[1.412772] (-) TimerEvent: {}
+[1.513594] (-) TimerEvent: {}
+[1.614297] (-) TimerEvent: {}
+[1.715091] (-) TimerEvent: {}
+[1.815800] (-) TimerEvent: {}
+[1.916519] (-) TimerEvent: {}
+[2.017223] (-) TimerEvent: {}
+[2.118124] (-) TimerEvent: {}
+[2.219305] (-) TimerEvent: {}
+[2.320065] (-) TimerEvent: {}
+[2.420834] (-) TimerEvent: {}
+[2.521529] (-) TimerEvent: {}
+[2.622220] (-) TimerEvent: {}
+[2.722953] (-) TimerEvent: {}
+[2.823698] (-) TimerEvent: {}
+[2.924508] (-) TimerEvent: {}
+[3.025429] (-) TimerEvent: {}
+[3.126203] (-) TimerEvent: {}
+[3.227206] (-) TimerEvent: {}
+[3.327910] (-) TimerEvent: {}
+[3.428662] (-) TimerEvent: {}
+[3.529635] (-) TimerEvent: {}
+[3.630961] (-) TimerEvent: {}
+[3.731828] (-) TimerEvent: {}
+[3.832588] (-) TimerEvent: {}
+[3.933307] (-) TimerEvent: {}
+[4.034066] (-) TimerEvent: {}
+[4.134944] (-) TimerEvent: {}
+[4.235761] (-) TimerEvent: {}
+[4.336499] (-) TimerEvent: {}
+[4.437233] (-) TimerEvent: {}
+[4.537964] (-) TimerEvent: {}
+[4.638719] (-) TimerEvent: {}
+[4.739553] (-) TimerEvent: {}
+[4.840394] (-) TimerEvent: {}
+[4.941179] (-) TimerEvent: {}
+[5.041975] (-) TimerEvent: {}
+[5.142694] (-) TimerEvent: {}
+[5.243408] (-) TimerEvent: {}
+[5.344167] (-) TimerEvent: {}
+[5.444951] (-) TimerEvent: {}
+[5.545736] (-) TimerEvent: {}
+[5.646567] (-) TimerEvent: {}
+[5.747475] (-) TimerEvent: {}
+[5.848324] (-) TimerEvent: {}
+[5.949091] (-) TimerEvent: {}
+[6.049905] (-) TimerEvent: {}
+[6.151110] (-) TimerEvent: {}
+[6.251890] (-) TimerEvent: {}
+[6.352805] (-) TimerEvent: {}
+[6.453608] (-) TimerEvent: {}
+[6.554625] (-) TimerEvent: {}
+[6.655475] (-) TimerEvent: {}
+[6.756247] (-) TimerEvent: {}
+[6.856959] (-) TimerEvent: {}
+[6.957865] (-) TimerEvent: {}
+[7.058633] (-) TimerEvent: {}
+[7.159322] (-) TimerEvent: {}
+[7.260199] (-) TimerEvent: {}
+[7.361116] (-) TimerEvent: {}
+[7.461958] (-) TimerEvent: {}
+[7.562736] (-) TimerEvent: {}
+[7.663490] (-) TimerEvent: {}
+[7.764195] (-) TimerEvent: {}
+[7.864905] (-) TimerEvent: {}
+[7.965798] (-) TimerEvent: {}
+[8.066719] (-) TimerEvent: {}
+[8.167572] (-) TimerEvent: {}
+[8.268343] (-) TimerEvent: {}
+[8.369232] (-) TimerEvent: {}
+[8.469986] (-) TimerEvent: {}
+[8.570841] (-) TimerEvent: {}
+[8.671638] (-) TimerEvent: {}
+[8.772406] (-) TimerEvent: {}
+[8.873165] (-) TimerEvent: {}
+[8.973971] (-) TimerEvent: {}
+[9.074835] (-) TimerEvent: {}
+[9.175702] (-) TimerEvent: {}
+[9.276500] (-) TimerEvent: {}
+[9.377451] (-) TimerEvent: {}
+[9.478364] (-) TimerEvent: {}
+[9.579198] (-) TimerEvent: {}
+[9.680067] (-) TimerEvent: {}
+[9.780960] (-) TimerEvent: {}
+[9.881820] (-) TimerEvent: {}
+[9.982764] (-) TimerEvent: {}
+[10.083590] (-) TimerEvent: {}
+[10.184550] (-) TimerEvent: {}
+[10.285447] (-) TimerEvent: {}
+[10.386347] (-) TimerEvent: {}
+[10.487235] (-) TimerEvent: {}
+[10.588037] (-) TimerEvent: {}
+[10.688849] (-) TimerEvent: {}
+[10.789653] (-) TimerEvent: {}
+[10.890451] (-) TimerEvent: {}
+[10.991422] (-) TimerEvent: {}
+[11.092305] (-) TimerEvent: {}
+[11.193096] (-) TimerEvent: {}
+[11.293916] (-) TimerEvent: {}
+[11.394808] (-) TimerEvent: {}
+[11.495588] (-) TimerEvent: {}
+[11.596390] (-) TimerEvent: {}
+[11.697209] (-) TimerEvent: {}
+[11.797973] (-) TimerEvent: {}
+[11.898786] (-) TimerEvent: {}
+[11.999587] (-) TimerEvent: {}
+[12.100390] (-) TimerEvent: {}
+[12.201255] (-) TimerEvent: {}
+[12.302028] (-) TimerEvent: {}
+[12.402823] (-) TimerEvent: {}
+[12.503569] (-) TimerEvent: {}
+[12.604313] (-) TimerEvent: {}
+[12.705100] (-) TimerEvent: {}
+[12.805865] (-) TimerEvent: {}
+[12.906774] (-) TimerEvent: {}
+[13.007559] (-) TimerEvent: {}
+[13.108370] (-) TimerEvent: {}
+[13.209202] (-) TimerEvent: {}
+[13.310046] (-) TimerEvent: {}
+[13.410858] (-) TimerEvent: {}
+[13.511694] (-) TimerEvent: {}
+[13.612532] (-) TimerEvent: {}
+[13.713342] (-) TimerEvent: {}
+[13.814163] (-) TimerEvent: {}
+[13.915029] (-) TimerEvent: {}
+[14.015809] (-) TimerEvent: {}
+[14.116618] (-) TimerEvent: {}
+[14.217403] (-) TimerEvent: {}
+[14.318167] (-) TimerEvent: {}
+[14.418953] (-) TimerEvent: {}
+[14.519733] (-) TimerEvent: {}
+[14.620530] (-) TimerEvent: {}
+[14.721340] (-) TimerEvent: {}
+[14.822164] (-) TimerEvent: {}
+[14.923056] (-) TimerEvent: {}
+[15.023918] (-) TimerEvent: {}
+[15.124703] (-) TimerEvent: {}
+[15.225494] (-) TimerEvent: {}
+[15.326585] (-) TimerEvent: {}
+[15.427488] (-) TimerEvent: {}
+[15.528309] (-) TimerEvent: {}
+[15.629105] (-) TimerEvent: {}
+[15.729929] (-) TimerEvent: {}
+[15.830815] (-) TimerEvent: {}
+[15.931590] (-) TimerEvent: {}
+[16.032363] (-) TimerEvent: {}
+[16.133260] (-) TimerEvent: {}
+[16.234058] (-) TimerEvent: {}
+[16.334826] (-) TimerEvent: {}
+[16.435576] (-) TimerEvent: {}
+[16.536342] (-) TimerEvent: {}
+[16.637119] (-) TimerEvent: {}
+[16.737916] (-) TimerEvent: {}
+[16.838736] (-) TimerEvent: {}
+[16.939500] (-) TimerEvent: {}
+[17.040374] (-) TimerEvent: {}
+[17.141190] (-) TimerEvent: {}
+[17.242054] (-) TimerEvent: {}
+[17.342939] (-) TimerEvent: {}
+[17.443715] (-) TimerEvent: {}
+[17.544543] (-) TimerEvent: {}
+[17.645342] (-) TimerEvent: {}
+[17.746242] (-) TimerEvent: {}
+[17.847120] (-) TimerEvent: {}
+[17.947887] (-) TimerEvent: {}
+[18.048673] (-) TimerEvent: {}
+[18.149486] (-) TimerEvent: {}
+[18.250286] (-) TimerEvent: {}
+[18.351104] (-) TimerEvent: {}
+[18.451889] (-) TimerEvent: {}
+[18.552665] (-) TimerEvent: {}
+[18.653542] (-) TimerEvent: {}
+[18.754336] (-) TimerEvent: {}
+[18.855220] (-) TimerEvent: {}
+[18.956103] (-) TimerEvent: {}
+[19.057073] (-) TimerEvent: {}
+[19.158232] (-) TimerEvent: {}
+[19.259074] (-) TimerEvent: {}
+[19.359865] (-) TimerEvent: {}
+[19.460637] (-) TimerEvent: {}
+[19.561553] (-) TimerEvent: {}
+[19.662404] (-) TimerEvent: {}
+[19.763270] (-) TimerEvent: {}
+[19.864095] (-) TimerEvent: {}
+[19.964947] (-) TimerEvent: {}
+[20.065798] (-) TimerEvent: {}
+[20.166712] (-) TimerEvent: {}
+[20.267498] (-) TimerEvent: {}
+[20.368420] (-) TimerEvent: {}
+[20.469204] (-) TimerEvent: {}
+[20.570005] (-) TimerEvent: {}
+[20.670830] (-) TimerEvent: {}
+[20.771599] (-) TimerEvent: {}
+[20.872382] (-) TimerEvent: {}
+[20.973202] (-) TimerEvent: {}
+[21.073999] (-) TimerEvent: {}
+[21.174944] (-) TimerEvent: {}
+[21.275803] (-) TimerEvent: {}
+[21.376644] (-) TimerEvent: {}
+[21.477540] (-) TimerEvent: {}
+[21.578374] (-) TimerEvent: {}
+[21.679189] (-) TimerEvent: {}
+[21.779959] (-) TimerEvent: {}
+[21.880892] (-) TimerEvent: {}
+[21.981792] (-) TimerEvent: {}
+[22.082644] (-) TimerEvent: {}
+[22.183426] (-) TimerEvent: {}
+[22.284197] (-) TimerEvent: {}
+[22.385063] (-) TimerEvent: {}
+[22.485865] (-) TimerEvent: {}
+[22.586705] (-) TimerEvent: {}
+[22.687479] (-) TimerEvent: {}
+[22.788408] (-) TimerEvent: {}
+[22.889496] (-) TimerEvent: {}
+[22.990306] (-) TimerEvent: {}
+[23.091169] (-) TimerEvent: {}
+[23.191917] (-) TimerEvent: {}
+[23.292784] (-) TimerEvent: {}
+[23.393585] (-) TimerEvent: {}
+[23.494333] (-) TimerEvent: {}
+[23.595209] (-) TimerEvent: {}
+[23.695988] (-) TimerEvent: {}
+[23.796824] (-) TimerEvent: {}
+[23.897641] (-) TimerEvent: {}
+[23.998441] (-) TimerEvent: {}
+[24.099247] (-) TimerEvent: {}
+[24.200031] (-) TimerEvent: {}
+[24.300852] (-) TimerEvent: {}
+[24.401618] (-) TimerEvent: {}
+[24.502394] (-) TimerEvent: {}
+[24.603229] (-) TimerEvent: {}
+[24.704080] (-) TimerEvent: {}
+[24.804931] (-) TimerEvent: {}
+[24.905775] (-) TimerEvent: {}
+[25.006596] (-) TimerEvent: {}
+[25.107380] (-) TimerEvent: {}
+[25.208132] (-) TimerEvent: {}
+[25.308999] (-) TimerEvent: {}
+[25.409787] (-) TimerEvent: {}
+[25.510628] (-) TimerEvent: {}
+[25.611405] (-) TimerEvent: {}
+[25.712197] (-) TimerEvent: {}
+[25.813079] (-) TimerEvent: {}
+[25.913859] (-) TimerEvent: {}
+[25.943645] (moveit_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[25.944968] (moveit_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[25.945594] (moveit_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[25.947364] (moveit_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[25.948125] (moveit_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[25.948768] (moveit_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[25.949133] (moveit_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[25.949483] (moveit_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[25.949835] (moveit_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[25.950181] (moveit_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[25.950510] (moveit_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[25.950966] (moveit_test) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:5\x1b[m\x1b[K:\n'}
+[25.951375] (moveit_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[25.952131] (moveit_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:54:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass std::shared_ptr<moveit::core::RobotState>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kposition\x1b[m\x1b[K\xe2\x80\x99\n'}
+[25.952513] (moveit_test) StderrLine: {'line': b'   54 |   current_state.\x1b[01;31m\x1b[Kposition\x1b[m\x1b[K.x,\n'}
+[25.952848] (moveit_test) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[25.953198] (moveit_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:55:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass std::shared_ptr<moveit::core::RobotState>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kposition\x1b[m\x1b[K\xe2\x80\x99\n'}
+[25.953544] (moveit_test) StderrLine: {'line': b'   55 |   current_state.\x1b[01;31m\x1b[Kposition\x1b[m\x1b[K.y,\n'}
+[25.953872] (moveit_test) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[25.954209] (moveit_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:56:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass std::shared_ptr<moveit::core::RobotState>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kposition\x1b[m\x1b[K\xe2\x80\x99\n'}
+[25.954733] (moveit_test) StderrLine: {'line': b'   56 |   current_state.\x1b[01;31m\x1b[Kposition\x1b[m\x1b[K.z,\n'}
+[25.955357] (moveit_test) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[25.955881] (moveit_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:57:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass std::shared_ptr<moveit::core::RobotState>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kpose\x1b[m\x1b[K\xe2\x80\x99\n'}
+[25.956589] (moveit_test) StderrLine: {'line': b'   57 |   current_state.\x1b[01;31m\x1b[Kpose\x1b[m\x1b[K.orientation.x,\n'}
+[25.957453] (moveit_test) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[25.958025] (moveit_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:58:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass std::shared_ptr<moveit::core::RobotState>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kpose\x1b[m\x1b[K\xe2\x80\x99\n'}
+[25.958416] (moveit_test) StderrLine: {'line': b'   58 |   current_state.\x1b[01;31m\x1b[Kpose\x1b[m\x1b[K.orientation.y,\n'}
+[25.958865] (moveit_test) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[25.959239] (moveit_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:59:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass std::shared_ptr<moveit::core::RobotState>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kpose\x1b[m\x1b[K\xe2\x80\x99\n'}
+[25.959619] (moveit_test) StderrLine: {'line': b'   59 |   current_state.\x1b[01;31m\x1b[Kpose\x1b[m\x1b[K.orientation.z,\n'}
+[25.959966] (moveit_test) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[25.960301] (moveit_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:60:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass std::shared_ptr<moveit::core::RobotState>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kpose\x1b[m\x1b[K\xe2\x80\x99\n'}
+[25.960722] (moveit_test) StderrLine: {'line': b'   60 |   current_state.\x1b[01;31m\x1b[Kpose\x1b[m\x1b[K.orientation.w\n'}
+[25.961085] (moveit_test) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[25.961422] (moveit_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:83:67:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode\x1b[m\x1b[K\xe2\x80\x99 is deprecated: Use moveit::core::MoveItErrorCode [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations\x07-Wdeprecated-declarations\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[25.961766] (moveit_test) StderrLine: {'line': b'   83 | (plan_result != moveit::planning_interface::MoveItErrorCode::\x1b[01;35m\x1b[KSUCCESS\x1b[m\x1b[K) {\n'}
+[25.962216] (moveit_test) StderrLine: {'line': b'      |                                                              \x1b[01;35m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[25.962920] (moveit_test) StderrLine: {'line': b'\n'}
+[25.963488] (moveit_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:7\x1b[m\x1b[K:\n'}
+[25.964004] (moveit_test) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/moveit/move_group_interface/move_group_interface.h:71:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[25.964421] (moveit_test) StderrLine: {'line': b'   71 | using \x1b[01;36m\x1b[KMoveItErrorCode\x1b[m\x1b[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;\n'}
+[25.964777] (moveit_test) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[25.965124] (moveit_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:93:67:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode\x1b[m\x1b[K\xe2\x80\x99 is deprecated: Use moveit::core::MoveItErrorCode [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations\x07-Wdeprecated-declarations\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[25.965502] (moveit_test) StderrLine: {'line': b'   93 | (exec_result != moveit::planning_interface::MoveItErrorCode::\x1b[01;35m\x1b[KSUCCESS\x1b[m\x1b[K) {\n'}
+[25.965835] (moveit_test) StderrLine: {'line': b'      |                                                              \x1b[01;35m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[25.966134] (moveit_test) StderrLine: {'line': b'\n'}
+[25.966413] (moveit_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:7\x1b[m\x1b[K:\n'}
+[25.966941] (moveit_test) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/moveit/move_group_interface/move_group_interface.h:71:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[25.967314] (moveit_test) StderrLine: {'line': b'   71 | using \x1b[01;36m\x1b[KMoveItErrorCode\x1b[m\x1b[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;\n'}
+[25.967636] (moveit_test) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[25.967923] (moveit_test) StderrLine: {'line': b'\x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:149:74:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode\x1b[m\x1b[K\xe2\x80\x99 is deprecated: Use moveit::core::MoveItErrorCode [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations\x07-Wdeprecated-declarations\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[25.968428] (moveit_test) StderrLine: {'line': b'  149 | _result_cart != moveit::planning_interface::MoveItErrorCode::\x1b[01;35m\x1b[KSUCCESS\x1b[m\x1b[K) {\n'}
+[25.969291] (moveit_test) StderrLine: {'line': b'      |                                                              \x1b[01;35m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[25.969917] (moveit_test) StderrLine: {'line': b'\n'}
+[25.970514] (moveit_test) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:7\x1b[m\x1b[K:\n'}
+[25.971198] (moveit_test) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/moveit/move_group_interface/move_group_interface.h:71:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[25.971700] (moveit_test) StderrLine: {'line': b'   71 | using \x1b[01;36m\x1b[KMoveItErrorCode\x1b[m\x1b[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;\n'}
+[25.972137] (moveit_test) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[26.014080] (-) TimerEvent: {}
+[26.114865] (-) TimerEvent: {}
+[26.215632] (-) TimerEvent: {}
+[26.316428] (-) TimerEvent: {}
+[26.417231] (-) TimerEvent: {}
+[26.518050] (-) TimerEvent: {}
+[26.618791] (-) TimerEvent: {}
+[26.719593] (-) TimerEvent: {}
+[26.820387] (-) TimerEvent: {}
+[26.921175] (-) TimerEvent: {}
+[27.021976] (-) TimerEvent: {}
+[27.122756] (-) TimerEvent: {}
+[27.223542] (-) TimerEvent: {}
+[27.324322] (-) TimerEvent: {}
+[27.425124] (-) TimerEvent: {}
+[27.525941] (-) TimerEvent: {}
+[27.626734] (-) TimerEvent: {}
+[27.727570] (-) TimerEvent: {}
+[27.828341] (-) TimerEvent: {}
+[27.929153] (-) TimerEvent: {}
+[28.029923] (-) TimerEvent: {}
+[28.130758] (-) TimerEvent: {}
+[28.231625] (-) TimerEvent: {}
+[28.332703] (-) TimerEvent: {}
+[28.433660] (-) TimerEvent: {}
+[28.534468] (-) TimerEvent: {}
+[28.635281] (-) TimerEvent: {}
+[28.736042] (-) TimerEvent: {}
+[28.836871] (-) TimerEvent: {}
+[28.937697] (-) TimerEvent: {}
+[29.038714] (-) TimerEvent: {}
+[29.139549] (-) TimerEvent: {}
+[29.240437] (-) TimerEvent: {}
+[29.341271] (-) TimerEvent: {}
+[29.442074] (-) TimerEvent: {}
+[29.542888] (-) TimerEvent: {}
+[29.643668] (-) TimerEvent: {}
+[29.745072] (-) TimerEvent: {}
+[29.846769] (-) TimerEvent: {}
+[29.947670] (-) TimerEvent: {}
+[30.048441] (-) TimerEvent: {}
+[30.149177] (-) TimerEvent: {}
+[30.250067] (-) TimerEvent: {}
+[30.351240] (-) TimerEvent: {}
+[30.452315] (-) TimerEvent: {}
+[30.553093] (-) TimerEvent: {}
+[30.653858] (-) TimerEvent: {}
+[30.754667] (-) TimerEvent: {}
+[30.855424] (-) TimerEvent: {}
+[30.956210] (-) TimerEvent: {}
+[31.057014] (-) TimerEvent: {}
+[31.157828] (-) TimerEvent: {}
+[31.258662] (-) TimerEvent: {}
+[31.359483] (-) TimerEvent: {}
+[31.460323] (-) TimerEvent: {}
+[31.561194] (-) TimerEvent: {}
+[31.662088] (-) TimerEvent: {}
+[31.762985] (-) TimerEvent: {}
+[31.863787] (-) TimerEvent: {}
+[31.964595] (-) TimerEvent: {}
+[32.065406] (-) TimerEvent: {}
+[32.166222] (-) TimerEvent: {}
+[32.267136] (-) TimerEvent: {}
+[32.367909] (-) TimerEvent: {}
+[32.468651] (-) TimerEvent: {}
+[32.569469] (-) TimerEvent: {}
+[32.670288] (-) TimerEvent: {}
+[32.771185] (-) TimerEvent: {}
+[32.872063] (-) TimerEvent: {}
+[32.972869] (-) TimerEvent: {}
+[33.073650] (-) TimerEvent: {}
+[33.174449] (-) TimerEvent: {}
+[33.275331] (-) TimerEvent: {}
+[33.376118] (-) TimerEvent: {}
+[33.476920] (-) TimerEvent: {}
+[33.577686] (-) TimerEvent: {}
+[33.678527] (-) TimerEvent: {}
+[33.779375] (-) TimerEvent: {}
+[33.880220] (-) TimerEvent: {}
+[33.981273] (-) TimerEvent: {}
+[34.082068] (-) TimerEvent: {}
+[34.182836] (-) TimerEvent: {}
+[34.283694] (-) TimerEvent: {}
+[34.384693] (-) TimerEvent: {}
+[34.485553] (-) TimerEvent: {}
+[34.586384] (-) TimerEvent: {}
+[34.687303] (-) TimerEvent: {}
+[34.788267] (-) TimerEvent: {}
+[34.889185] (-) TimerEvent: {}
+[34.990502] (-) TimerEvent: {}
+[35.091332] (-) TimerEvent: {}
+[35.192114] (-) TimerEvent: {}
+[35.292915] (-) TimerEvent: {}
+[35.393874] (-) TimerEvent: {}
+[35.494992] (-) TimerEvent: {}
+[35.595746] (-) TimerEvent: {}
+[35.696690] (-) TimerEvent: {}
+[35.797764] (-) TimerEvent: {}
+[35.898656] (-) TimerEvent: {}
+[35.999653] (-) TimerEvent: {}
+[36.063741] (moveit_test) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/moveit_essaie.dir/build.make:76: CMakeFiles/moveit_essaie.dir/src/moveit_essaie.cpp.o] Error 1\n'}
+[36.068914] (moveit_test) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/moveit_essaie.dir/all] Error 2\n'}
+[36.069894] (moveit_test) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[36.099841] (-) TimerEvent: {}
+[36.200677] (-) TimerEvent: {}
+[36.244544] (moveit_test) CommandEnded: {'returncode': 2}
+[36.300900] (-) TimerEvent: {}
+[36.396665] (moveit_test) JobEnded: {'identifier': 'moveit_test', 'rc': 2}
+[36.401132] (-) TimerEvent: {}
+[36.408706] (-) EventReactorShutdown: {}

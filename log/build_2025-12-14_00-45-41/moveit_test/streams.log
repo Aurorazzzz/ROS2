@@ -1,0 +1,65 @@
+[0.085s] Invoking command in '/home/insa/ros_ws/src/build/moveit_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake --build /home/insa/ros_ws/src/build/moveit_test -- -j4 -l4
+[0.729s] [35m[1mConsolidate compiler generated dependencies of target moveit_essaie[0m
+[1.046s] [ 50%] [32mBuilding CXX object CMakeFiles/moveit_essaie.dir/src/moveit_essaie.cpp.o[0m
+[25.943s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[25.943s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[25.945s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[25.946s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[25.947s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[25.947s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[25.947s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[25.948s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[25.948s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[25.948s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[25.949s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[25.949s]                  from [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:5[m[K:
+[25.950s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[25.950s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:54:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<moveit::core::RobotState>[m[K’ has no member named ‘[01m[Kposition[m[K’
+[25.951s]    54 |   current_state.[01;31m[Kposition[m[K.x,
+[25.951s]       |                 [01;31m[K^~~~~~~~[m[K
+[25.951s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:55:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<moveit::core::RobotState>[m[K’ has no member named ‘[01m[Kposition[m[K’
+[25.952s]    55 |   current_state.[01;31m[Kposition[m[K.y,
+[25.952s]       |                 [01;31m[K^~~~~~~~[m[K
+[25.953s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:56:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<moveit::core::RobotState>[m[K’ has no member named ‘[01m[Kposition[m[K’
+[25.953s]    56 |   current_state.[01;31m[Kposition[m[K.z,
+[25.954s]       |                 [01;31m[K^~~~~~~~[m[K
+[25.954s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:57:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<moveit::core::RobotState>[m[K’ has no member named ‘[01m[Kpose[m[K’
+[25.955s]    57 |   current_state.[01;31m[Kpose[m[K.orientation.x,
+[25.956s]       |                 [01;31m[K^~~~[m[K
+[25.956s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:58:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<moveit::core::RobotState>[m[K’ has no member named ‘[01m[Kpose[m[K’
+[25.957s]    58 |   current_state.[01;31m[Kpose[m[K.orientation.y,
+[25.957s]       |                 [01;31m[K^~~~[m[K
+[25.958s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:59:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<moveit::core::RobotState>[m[K’ has no member named ‘[01m[Kpose[m[K’
+[25.958s]    59 |   current_state.[01;31m[Kpose[m[K.orientation.z,
+[25.958s]       |                 [01;31m[K^~~~[m[K
+[25.959s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:60:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<moveit::core::RobotState>[m[K’ has no member named ‘[01m[Kpose[m[K’
+[25.959s]    60 |   current_state.[01;31m[Kpose[m[K.orientation.w
+[25.959s]       |                 [01;31m[K^~~~[m[K
+[25.960s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:83:67:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[25.960s]    83 | (plan_result != moveit::planning_interface::MoveItErrorCode::[01;35m[KSUCCESS[m[K) {
+[25.960s]       |                                                              [01;35m[K^~~~~~~[m[K
+[25.961s] 
+[25.962s] In file included from [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:7[m[K:
+[25.962s] [01m[K/opt/ros/humble/include/moveit/move_group_interface/move_group_interface.h:71:7:[m[K [01;36m[Knote: [m[Kdeclared here
+[25.963s]    71 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+[25.963s]       |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[25.963s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:93:67:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[25.964s]    93 | (exec_result != moveit::planning_interface::MoveItErrorCode::[01;35m[KSUCCESS[m[K) {
+[25.964s]       |                                                              [01;35m[K^~~~~~~[m[K
+[25.964s] 
+[25.965s] In file included from [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:7[m[K:
+[25.965s] [01m[K/opt/ros/humble/include/moveit/move_group_interface/move_group_interface.h:71:7:[m[K [01;36m[Knote: [m[Kdeclared here
+[25.966s]    71 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+[25.966s]       |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[25.966s] [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:149:74:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[25.967s]   149 | _result_cart != moveit::planning_interface::MoveItErrorCode::[01;35m[KSUCCESS[m[K) {
+[25.968s]       |                                                              [01;35m[K^~~~~~~[m[K
+[25.968s] 
+[25.969s] In file included from [01m[K/home/insa/ros_ws/src/moveit_test/src/moveit_essaie.cpp:7[m[K:
+[25.970s] [01m[K/opt/ros/humble/include/moveit/move_group_interface/move_group_interface.h:71:7:[m[K [01;36m[Knote: [m[Kdeclared here
+[25.970s]    71 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+[25.970s]       |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[36.066s] gmake[2]: *** [CMakeFiles/moveit_essaie.dir/build.make:76: CMakeFiles/moveit_essaie.dir/src/moveit_essaie.cpp.o] Error 1
+[36.068s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/moveit_essaie.dir/all] Error 2
+[36.068s] gmake: *** [Makefile:146: all] Error 2
+[36.244s] Invoked command in '/home/insa/ros_ws/src/build/moveit_test' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake --build /home/insa/ros_ws/src/build/moveit_test -- -j4 -l4

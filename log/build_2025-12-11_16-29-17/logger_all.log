@@ -1,0 +1,151 @@
+[0.788s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'moveit_test']
+[0.788s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['moveit_test'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffaac9b8e0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffaae78c70>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffaae78c70>>)
+[2.094s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.095s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.095s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.095s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.095s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.095s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.096s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/insa/ros_ws/src'
+[2.096s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.097s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.097s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.098s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.098s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.098s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.098s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.098s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.098s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.172s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.172s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.172s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.172s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.173s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.173s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.174s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.174s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.174s] Level 1:colcon.colcon_core.package_identification:_identify(deplacement_test_1) by extensions ['ignore', 'ignore_ament_install']
+[2.175s] Level 1:colcon.colcon_core.package_identification:_identify(deplacement_test_1) by extension 'ignore'
+[2.175s] Level 1:colcon.colcon_core.package_identification:_identify(deplacement_test_1) by extension 'ignore_ament_install'
+[2.175s] Level 1:colcon.colcon_core.package_identification:_identify(deplacement_test_1) by extensions ['colcon_pkg']
+[2.175s] Level 1:colcon.colcon_core.package_identification:_identify(deplacement_test_1) by extension 'colcon_pkg'
+[2.175s] Level 1:colcon.colcon_core.package_identification:_identify(deplacement_test_1) by extensions ['colcon_meta']
+[2.176s] Level 1:colcon.colcon_core.package_identification:_identify(deplacement_test_1) by extension 'colcon_meta'
+[2.176s] Level 1:colcon.colcon_core.package_identification:_identify(deplacement_test_1) by extensions ['ros']
+[2.176s] Level 1:colcon.colcon_core.package_identification:_identify(deplacement_test_1) by extension 'ros'
+[2.189s] DEBUG:colcon.colcon_core.package_identification:Package 'deplacement_test_1' with type 'ros.ament_python' and name 'deplacement_test_1'
+[2.190s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.190s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.191s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.191s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.192s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.192s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.193s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_test) by extensions ['ignore', 'ignore_ament_install']
+[2.193s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_test) by extension 'ignore'
+[2.193s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_test) by extension 'ignore_ament_install'
+[2.194s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_test) by extensions ['colcon_pkg']
+[2.194s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_test) by extension 'colcon_pkg'
+[2.194s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_test) by extensions ['colcon_meta']
+[2.194s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_test) by extension 'colcon_meta'
+[2.195s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_test) by extensions ['ros']
+[2.195s] Level 1:colcon.colcon_core.package_identification:_identify(moveit_test) by extension 'ros'
+[2.201s] DEBUG:colcon.colcon_core.package_identification:Package 'moveit_test' with type 'ros.ament_cmake' and name 'moveit_test'
+[2.202s] Level 1:colcon.colcon_core.package_identification:_identify(ur5_description_custom) by extensions ['ignore', 'ignore_ament_install']
+[2.202s] Level 1:colcon.colcon_core.package_identification:_identify(ur5_description_custom) by extension 'ignore'
+[2.202s] Level 1:colcon.colcon_core.package_identification:_identify(ur5_description_custom) by extension 'ignore_ament_install'
+[2.203s] Level 1:colcon.colcon_core.package_identification:_identify(ur5_description_custom) by extensions ['colcon_pkg']
+[2.203s] Level 1:colcon.colcon_core.package_identification:_identify(ur5_description_custom) by extension 'colcon_pkg'
+[2.203s] Level 1:colcon.colcon_core.package_identification:_identify(ur5_description_custom) by extensions ['colcon_meta']
+[2.204s] Level 1:colcon.colcon_core.package_identification:_identify(ur5_description_custom) by extension 'colcon_meta'
+[2.204s] Level 1:colcon.colcon_core.package_identification:_identify(ur5_description_custom) by extensions ['ros']
+[2.204s] Level 1:colcon.colcon_core.package_identification:_identify(ur5_description_custom) by extension 'ros'
+[2.208s] DEBUG:colcon.colcon_core.package_identification:Package 'ur5_description_custom' with type 'ros.ament_cmake' and name 'ur5_description_custom'
+[2.208s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.208s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.209s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.209s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.209s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.357s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'deplacement_test_1' in 'deplacement_test_1'
+[2.357s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'ur5_description_custom' in 'ur5_description_custom'
+[2.360s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.361s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.380s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/insa/ros_ws/install
+[2.395s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 333 installed packages in /opt/ros/humble
+[2.446s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.867s] Level 5:colcon.colcon_core.verb:set package 'moveit_test' build argument 'cmake_args' from command line to 'None'
+[2.867s] Level 5:colcon.colcon_core.verb:set package 'moveit_test' build argument 'cmake_target' from command line to 'None'
+[2.867s] Level 5:colcon.colcon_core.verb:set package 'moveit_test' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.867s] Level 5:colcon.colcon_core.verb:set package 'moveit_test' build argument 'cmake_clean_cache' from command line to 'False'
+[2.867s] Level 5:colcon.colcon_core.verb:set package 'moveit_test' build argument 'cmake_clean_first' from command line to 'False'
+[2.867s] Level 5:colcon.colcon_core.verb:set package 'moveit_test' build argument 'cmake_force_configure' from command line to 'False'
+[2.868s] Level 5:colcon.colcon_core.verb:set package 'moveit_test' build argument 'ament_cmake_args' from command line to 'None'
+[2.868s] Level 5:colcon.colcon_core.verb:set package 'moveit_test' build argument 'catkin_cmake_args' from command line to 'None'
+[2.868s] Level 5:colcon.colcon_core.verb:set package 'moveit_test' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.868s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_test' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/insa/ros_ws/src/build/moveit_test', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/insa/ros_ws/src/install/moveit_test', 'merge_install': False, 'path': '/home/insa/ros_ws/src/moveit_test', 'symlink_install': False, 'test_result_base': None}
+[2.868s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.872s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.872s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/insa/ros_ws/src/moveit_test' with build type 'ament_cmake'
+[2.873s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/insa/ros_ws/src/moveit_test'
+[2.899s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.900s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.900s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.950s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/insa/ros_ws/src/build/moveit_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake /home/insa/ros_ws/src/moveit_test -DCMAKE_INSTALL_PREFIX=/home/insa/ros_ws/src/install/moveit_test
+[18.349s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/insa/ros_ws/src/build/moveit_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake /home/insa/ros_ws/src/moveit_test -DCMAKE_INSTALL_PREFIX=/home/insa/ros_ws/src/install/moveit_test
+[18.364s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/insa/ros_ws/src/build/moveit_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake --build /home/insa/ros_ws/src/build/moveit_test -- -j4 -l4
+[60.247s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/insa/ros_ws/src/build/moveit_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake --build /home/insa/ros_ws/src/build/moveit_test -- -j4 -l4
+[60.390s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/insa/ros_ws/src/build/moveit_test': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake --install /home/insa/ros_ws/src/build/moveit_test
+[60.580s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moveit_test)
+[60.591s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/insa/ros_ws/src/build/moveit_test' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/insa/ros_ws/install/deplacement_test_1:/opt/ros/humble /usr/bin/cmake --install /home/insa/ros_ws/src/build/moveit_test
+[60.752s] Level 1:colcon.colcon_core.environment:checking '/home/insa/ros_ws/src/install/moveit_test' for CMake module files
+[60.759s] Level 1:colcon.colcon_core.environment:checking '/home/insa/ros_ws/src/install/moveit_test' for CMake config files
+[60.762s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit_test', 'cmake_prefix_path')
+[60.765s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/hook/cmake_prefix_path.ps1'
+[60.777s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/hook/cmake_prefix_path.dsv'
+[60.782s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/hook/cmake_prefix_path.sh'
+[60.788s] Level 1:colcon.colcon_core.environment:checking '/home/insa/ros_ws/src/install/moveit_test/lib'
+[60.789s] Level 1:colcon.colcon_core.environment:checking '/home/insa/ros_ws/src/install/moveit_test/bin'
+[60.790s] Level 1:colcon.colcon_core.environment:checking '/home/insa/ros_ws/src/install/moveit_test/lib/pkgconfig/moveit_test.pc'
+[60.793s] Level 1:colcon.colcon_core.environment:checking '/home/insa/ros_ws/src/install/moveit_test/lib/python3.10/site-packages'
+[60.795s] Level 1:colcon.colcon_core.environment:checking '/home/insa/ros_ws/src/install/moveit_test/bin'
+[60.797s] INFO:colcon.colcon_core.shell:Creating package script '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/package.ps1'
+[60.802s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/package.dsv'
+[60.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/package.sh'
+[60.814s] INFO:colcon.colcon_core.shell:Creating package script '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/package.bash'
+[60.820s] INFO:colcon.colcon_core.shell:Creating package script '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/package.zsh'
+[60.827s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/insa/ros_ws/src/install/moveit_test/share/colcon-core/packages/moveit_test)
+[60.836s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(moveit_test)
+[60.838s] Level 1:colcon.colcon_core.environment:checking '/home/insa/ros_ws/src/install/moveit_test' for CMake module files
+[60.842s] Level 1:colcon.colcon_core.environment:checking '/home/insa/ros_ws/src/install/moveit_test' for CMake config files
+[60.844s] Level 1:colcon.colcon_core.shell:create_environment_hook('moveit_test', 'cmake_prefix_path')
+[60.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/hook/cmake_prefix_path.ps1'
+[60.847s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/hook/cmake_prefix_path.dsv'
+[60.849s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/hook/cmake_prefix_path.sh'
+[60.852s] Level 1:colcon.colcon_core.environment:checking '/home/insa/ros_ws/src/install/moveit_test/lib'
+[60.852s] Level 1:colcon.colcon_core.environment:checking '/home/insa/ros_ws/src/install/moveit_test/bin'
+[60.853s] Level 1:colcon.colcon_core.environment:checking '/home/insa/ros_ws/src/install/moveit_test/lib/pkgconfig/moveit_test.pc'
+[60.854s] Level 1:colcon.colcon_core.environment:checking '/home/insa/ros_ws/src/install/moveit_test/lib/python3.10/site-packages'
+[60.855s] Level 1:colcon.colcon_core.environment:checking '/home/insa/ros_ws/src/install/moveit_test/bin'
+[60.857s] INFO:colcon.colcon_core.shell:Creating package script '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/package.ps1'
+[60.862s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/package.dsv'
+[60.864s] INFO:colcon.colcon_core.shell:Creating package script '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/package.sh'
+[60.867s] INFO:colcon.colcon_core.shell:Creating package script '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/package.bash'
+[60.869s] INFO:colcon.colcon_core.shell:Creating package script '/home/insa/ros_ws/src/install/moveit_test/share/moveit_test/package.zsh'
+[60.871s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/insa/ros_ws/src/install/moveit_test/share/colcon-core/packages/moveit_test)
+[60.874s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[60.877s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[60.878s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[60.878s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[61.087s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[61.088s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[61.088s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[61.348s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[61.350s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/insa/ros_ws/src/install/local_setup.ps1'
+[61.356s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/insa/ros_ws/src/install/_local_setup_util_ps1.py'
+[61.367s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/insa/ros_ws/src/install/setup.ps1'
+[61.381s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/insa/ros_ws/src/install/local_setup.sh'
+[61.388s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/insa/ros_ws/src/install/_local_setup_util_sh.py'
+[61.392s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/insa/ros_ws/src/install/setup.sh'
+[61.399s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/insa/ros_ws/src/install/local_setup.bash'
+[61.403s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/insa/ros_ws/src/install/setup.bash'
+[61.410s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/insa/ros_ws/src/install/local_setup.zsh'
+[61.415s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/insa/ros_ws/src/install/setup.zsh'

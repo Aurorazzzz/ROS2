@@ -10,3 +10,197 @@ ros2 topic pub --once /joint_trajectory_controller/joint_trajectory \
 }"
 
 Salut c'est Théo ettdtd
+
+
+
+insa@insa-desktop:~$ ros2 node list
+/controller_manager
+/controller_stopper
+/dashboard_client
+/force_mode_controller
+/force_torque_sensor_broadcaster
+/forward_position_controller
+/forward_velocity_controller
+/freedrive_mode_controller
+/io_and_status_controller
+/joint_state_broadcaster
+/joint_trajectory_controller
+/passthrough_trajectory_controller
+/robot_state_publisher
+/scaled_joint_trajectory_controller
+/speed_scaling_state_broadcaster
+/tcp_pose_broadcaster
+/tool_contact_controller
+/transform_listener_impl_ffff6816b050
+/ur_configuration_controller
+/ur_robot_state_helper
+/urscript_interface
+insa@insa-desktop:~$ ros2 node list
+/controller_manager
+/controller_stopper
+/dashboard_client
+/force_mode_controller
+/force_torque_sensor_broadcaster
+/forward_position_controller
+/forward_velocity_controller
+/freedrive_mode_controller
+/io_and_status_controller
+/joint_state_broadcaster
+/joint_trajectory_controller
+/passthrough_trajectory_controller
+/robot_state_publisher
+/scaled_joint_trajectory_controller
+/speed_scaling_state_broadcaster
+/tcp_pose_broadcaster
+/tool_contact_controller
+/transform_listener_impl_ffff6816b050
+/ur_configuration_controller
+/ur_robot_state_helper
+/urscript_interface
+insa@insa-desktop:~$ 
+insa@insa-desktop:~$ ros2 node list
+/controller_manager
+/controller_stopper
+/dashboard_client
+/force_mode_controller
+/force_torque_sensor_broadcaster
+/forward_position_controller
+/forward_velocity_controller
+/freedrive_mode_controller
+/io_and_status_controller
+/joint_state_broadcaster
+/joint_trajectory_controller
+/move_group
+/move_group_private_187650743439856
+/moveit_simple_controller_manager
+/passthrough_trajectory_controller
+/robot_state_publisher
+/rviz2_moveit
+/scaled_joint_trajectory_controller
+/servo_node
+/servo_node_private_187650789433376
+/speed_scaling_state_broadcaster
+/tcp_pose_broadcaster
+/tool_contact_controller
+/transform_listener_impl_aaaad8018ea0
+/transform_listener_impl_aaaadaa549d0
+/transform_listener_impl_ffff6816b050
+/ur_configuration_controller
+/ur_robot_state_helper
+/urscript_interface
+
+
+insa@insa-desktop:~$ ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5 launch_rviz:=true
+[INFO] [launch]: All log files can be found below /home/insa/.ros/log/2025-12-19-15-09-10-779911-insa-desktop-3385
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [move_group-1]: process started with pid [3391]
+[INFO] [rviz2-2]: process started with pid [3393]
+[INFO] [servo_node_main-3]: process started with pid [3395]
+[rviz2-2] Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+[servo_node_main-3] [WARN] [1766153355.244684671] [moveit_servo.servo_node]: Intra-process communication is disabled, consider enabling it by adding: 
+[servo_node_main-3] extra_arguments=[{'use_intra_process_comms' : True}]
+[servo_node_main-3] to the Servo composable node in the launch file
+[move_group-1] [WARN] [1766153355.362013728] [move_group.move_group]: Falling back to using the the move_group node namespace (deprecated behavior).
+[servo_node_main-3] [INFO] [1766153355.426909042] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.070609 seconds
+[servo_node_main-3] [INFO] [1766153355.427081274] [moveit_robot_model.robot_model]: Loading robot model 'ur'...
+[servo_node_main-3] [INFO] [1766153355.427124652] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[move_group-1] [INFO] [1766153355.484564947] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.11713 seconds
+[move_group-1] [INFO] [1766153355.484722610] [moveit_robot_model.robot_model]: Loading robot model 'ur'...
+[move_group-1] [INFO] [1766153355.484762099] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[servo_node_main-3] [WARN] [1766153355.652781545] [moveit_ros.robot_model_loader]: No kinematics plugins defined. Fill and load kinematics.yaml!
+[servo_node_main-3] [INFO] [1766153356.083819840] [moveit_ros.current_state_monitor]: Listening to joint states on topic '/joint_states'
+[move_group-1] [INFO] [1766153356.158629079] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[move_group-1] [INFO] [1766153356.159313103] [moveit.ros_planning_interface.moveit_cpp]: Listening to 'joint_states' for joint states
+[move_group-1] [INFO] [1766153356.167528587] [moveit_ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[servo_node_main-3] [INFO] [1766153356.171311850] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[servo_node_main-3] [INFO] [1766153356.171406084] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[servo_node_main-3] [INFO] [1766153356.190629373] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/planning_scene'
+[servo_node_main-3] [INFO] [1766153356.194001447] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[servo_node_main-3] [INFO] [1766153356.200669246] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'collision_object'
+[servo_node_main-3] [INFO] [1766153356.206461758] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[servo_node_main-3] [WARN] [1766153356.208072148] [moveit.ros.occupancy_map_monitor.middleware_handle]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[servo_node_main-3] [ERROR] [1766153356.209089880] [moveit.ros.occupancy_map_monitor.middleware_handle]: No 3D sensor plugin(s) defined for octomap updates
+[move_group-1] [INFO] [1766153356.211098888] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[move_group-1] [INFO] [1766153356.211215043] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[servo_node_main-3] [INFO] [1766153356.233369670] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Publishing maintained planning scene on '/servo_node/publish_planning_scene'
+[move_group-1] [INFO] [1766153356.269025648] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/planning_scene'
+[move_group-1] [INFO] [1766153356.269474345] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[move_group-1] [INFO] [1766153356.298710070] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'collision_object'
+[move_group-1] [INFO] [1766153356.343435807] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[move_group-1] [WARN] [1766153356.344707658] [moveit.ros.occupancy_map_monitor.middleware_handle]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[move_group-1] [ERROR] [1766153356.344799319] [moveit.ros.occupancy_map_monitor.middleware_handle]: No 3D sensor plugin(s) defined for octomap updates
+[move_group-1] [INFO] [1766153356.399799979] [moveit.ros_planning_interface.moveit_cpp]: Loading planning pipeline 'move_group'
+[move_group-1] [INFO] [1766153356.542776059] [moveit.ros_planning.planning_pipeline]: Using planning interface 'OMPL'
+[move_group-1] [INFO] [1766153356.558087174] [moveit_ros.add_time_optimal_parameterization]: Param 'move_group.path_tolerance' was not set. Using default value: 0.100000
+[move_group-1] [INFO] [1766153356.558181853] [moveit_ros.add_time_optimal_parameterization]: Param 'move_group.resample_dt' was not set. Using default value: 0.100000
+[move_group-1] [INFO] [1766153356.558208272] [moveit_ros.add_time_optimal_parameterization]: Param 'move_group.min_angle_change' was not set. Using default value: 0.001000
+[move_group-1] [INFO] [1766153356.558274606] [moveit_ros.fix_workspace_bounds]: Param 'move_group.default_workspace_bounds' was not set. Using default value: 10.000000
+[move_group-1] [INFO] [1766153356.558353826] [moveit_ros.fix_start_state_bounds]: Param 'move_group.start_state_max_bounds_error' was set to 0.100000
+[move_group-1] [INFO] [1766153356.558382781] [moveit_ros.fix_start_state_bounds]: Param 'move_group.start_state_max_dt' was not set. Using default value: 0.500000
+[move_group-1] [INFO] [1766153356.558428307] [moveit_ros.fix_start_state_collision]: Param 'move_group.start_state_max_dt' was not set. Using default value: 0.500000
+[move_group-1] [INFO] [1766153356.558452393] [moveit_ros.fix_start_state_collision]: Param 'move_group.jiggle_fraction' was not set. Using default value: 0.020000
+[move_group-1] [INFO] [1766153356.558477571] [moveit_ros.fix_start_state_collision]: Param 'move_group.max_sampling_attempts' was not set. Using default value: 100
+[move_group-1] [INFO] [1766153356.558519856] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Add Time Optimal Parameterization'
+[move_group-1] [INFO] [1766153356.558540536] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Fix Workspace Bounds'
+[move_group-1] [INFO] [1766153356.558557809] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Fix Start State Bounds'
+[move_group-1] [INFO] [1766153356.558575675] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Fix Start State In Collision'
+[move_group-1] [INFO] [1766153356.558731430] [moveit.ros_planning.planning_pipeline]: Using planning request adapter 'Fix Start State Path Constraints'
+[move_group-1] [INFO] [1766153356.897784918] [moveit.plugins.moveit_simple_controller_manager]: Added FollowJointTrajectory controller for scaled_joint_trajectory_controller
+[move_group-1] [INFO] [1766153356.957739644] [moveit.plugins.moveit_simple_controller_manager]: Added FollowJointTrajectory controller for joint_trajectory_controller
+[move_group-1] [INFO] [1766153356.960080971] [moveit.plugins.moveit_simple_controller_manager]: Returned 2 controllers in list
+[move_group-1] [INFO] [1766153356.960635177] [moveit.plugins.moveit_simple_controller_manager]: Returned 2 controllers in list
+[move_group-1] [INFO] [1766153356.963933975] [moveit_ros.trajectory_execution_manager]: Trajectory execution is not managing controllers
+[move_group-1] [INFO] [1766153356.964066699] [move_group.move_group]: MoveGroup debug mode is ON
+[move_group-1] [INFO] [1766153357.460012749] [move_group.move_group]: 
+[move_group-1] 
+[move_group-1] ********************************************************
+[move_group-1] * MoveGroup using: 
+[move_group-1] *     - ApplyPlanningSceneService
+[move_group-1] *     - ClearOctomapService
+[move_group-1] *     - CartesianPathService
+[move_group-1] *     - ExecuteTrajectoryAction
+[move_group-1] *     - GetPlanningSceneService
+[move_group-1] *     - KinematicsService
+[move_group-1] *     - MoveAction
+[move_group-1] *     - MotionPlanService
+[move_group-1] *     - QueryPlannersService
+[move_group-1] *     - StateValidationService
+[move_group-1] ********************************************************
+[move_group-1] 
+[move_group-1] [INFO] [1766153357.460292101] [moveit_move_group_capabilities_base.move_group_context]: MoveGroup context using planning plugin ompl_interface/OMPLPlanner
+[move_group-1] [INFO] [1766153357.460349419] [moveit_move_group_capabilities_base.move_group_context]: MoveGroup context initialization complete
+[move_group-1] Loading 'move_group/ApplyPlanningSceneService'...
+[move_group-1] Loading 'move_group/ClearOctomapService'...
+[move_group-1] Loading 'move_group/MoveGroupCartesianPathService'...
+[move_group-1] Loading 'move_group/MoveGroupExecuteTrajectoryAction'...
+[move_group-1] Loading 'move_group/MoveGroupGetPlanningSceneService'...
+[move_group-1] Loading 'move_group/MoveGroupKinematicsService'...
+[move_group-1] Loading 'move_group/MoveGroupMoveAction'...
+[move_group-1] Loading 'move_group/MoveGroupPlanService'...
+[move_group-1] Loading 'move_group/MoveGroupQueryPlannersService'...
+[move_group-1] Loading 'move_group/MoveGroupStateValidationService'...
+[move_group-1] 
+[move_group-1] You can start planning now!
+[move_group-1] 
+[servo_node_main-3] [WARN] [1766153357.598552294] [moveit_servo.servo_calcs]: No kinematics solver instantiated for group 'ur_manipulator'. Will use inverse Jacobian for servo calculations instead.
+[servo_node_main-3] [WARN] [1766153357.598709012] [moveit_servo.collision_check]: Collision check rate is low, increase it in yaml file if CPU allows
+[rviz2-2] [INFO] [1766153361.289380363] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-2] [INFO] [1766153361.292396605] [rviz2]: OpenGl version: 3.1 (GLSL 1.4)
+[rviz2-2] [INFO] [1766153361.527019582] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-2] Warning: class_loader.impl: SEVERE WARNING!!! A namespace collision has occurred with plugin factory for class rviz_default_plugins::displays::InteractiveMarkerDisplay. New factory will OVERWRITE existing one. This situation occurs when libraries containing plugins are directly linked against an executable (the one running right now generating this message). Please separate plugins out into their own library or just don't link against the library and use either class_loader::ClassLoader/MultiLibraryClassLoader to open.
+[rviz2-2]          at line 253 in /opt/ros/humble/include/class_loader/class_loader/class_loader_core.hpp
+[rviz2-2] [ERROR] [1766153365.601023350] [moveit_ros_visualization.motion_planning_frame]: Action server: /recognize_objects not available
+[rviz2-2] [INFO] [1766153365.772668693] [moveit_ros_visualization.motion_planning_frame]: MoveGroup namespace changed: / -> . Reloading params.
+[rviz2-2] [INFO] [1766153365.989488562] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.0266062 seconds
+[rviz2-2] [INFO] [1766153365.989721816] [moveit_robot_model.robot_model]: Loading robot model 'ur'...
+[rviz2-2] [INFO] [1766153365.989802794] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[rviz2-2] [INFO] [1766153366.837473845] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[rviz2-2] [INFO] [1766153366.900299130] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/monitored_planning_scene'
+[rviz2-2] [INFO] [1766153368.333167758] [interactive_marker_display_187651102138864]: Connected on namespace: /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic
+[rviz2-2] [INFO] [1766153368.379987333] [moveit_ros_visualization.motion_planning_frame]: group ur_manipulator
+[rviz2-2] [INFO] [1766153368.380086640] [moveit_ros_visualization.motion_planning_frame]: Constructing new MoveGroup connection for group 'ur_manipulator' in namespace ''
+[rviz2-2] [INFO] [1766153368.744438741] [move_group_interface]: Ready to take commands for planning group ur_manipulator.
+[rviz2-2] [INFO] [1766153368.808730325] [interactive_marker_display_187651102138864]: Sending request for interactive markers
+[rviz2-2] [INFO] [1766153370.244725907] [interactive_marker_display_187651102138864]: Service response received for initialization
+
+
