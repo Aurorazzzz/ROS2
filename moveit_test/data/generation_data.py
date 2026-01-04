@@ -235,7 +235,7 @@ def preview(rows):
 
 def main():
     image_path = "moveit_test/data/input.png"      # <-- mettez ici votre image
-    out_csv = "output.csv"
+    out_csv = "moveit_test/data/output.csv"
 
     paths = image_to_paths(image_path)
     if len(paths) == 0:
