@@ -161,7 +161,7 @@ const std::size_t chunk_size = 10;
 const double eef_step = 0.01;
 const double jump_thresh = 0.0;
 
-const double pen_lift = 0.01; // 1 cm en mètres
+const double pen_lift = -0.01; // 1 cm en mètres
 
 // Pose d'ancrage : origine du dessin (u=0, v=0)
 const geometry_msgs::msg::Pose anchor_pose = move_group_interface.getCurrentPose().pose;
