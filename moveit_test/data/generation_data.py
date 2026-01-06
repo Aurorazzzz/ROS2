@@ -17,11 +17,11 @@ CENTER_V = 0.00
 # Taille du dessin (dans VOS unités)
 # -> le dessin sera contenu dans un carré/rectangle de cette taille en gardant le ratio
 # Exemple : 0.20 = 20 cm si vos unités sont en mètres
-DRAW_WIDTH  = 0.20
-DRAW_HEIGHT = 0.20
+DRAW_WIDTH  = 0.50
+DRAW_HEIGHT = 0.50
 
 # Échantillonnage : espacement entre points successifs (dans VOS unités)
-POINT_SPACING = 0.002  # 2 mm si unités = mètres
+POINT_SPACING = 0.005  # 2 mm si unités = mètres
 
 # Seuils pour l'extraction des contours (Canny)
 CANNY_T1 = 80

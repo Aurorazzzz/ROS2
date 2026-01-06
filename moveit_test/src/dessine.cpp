@@ -157,38 +157,43 @@ RCLCPP_INFO(node->get_logger(), "Dodo");
   // -----------------------------
   //  Waypoints à partir de la pose courante
   // -----------------------------
-const std::size_t chunk_size = 10;     // à ajuster
-const double eef_step = 0.01;          // 1 cm (0.005 si vous voulez plus fin)
+const std::size_t chunk_size = 10;
+const double eef_step = 0.01;
 const double jump_thresh = 0.0;
 
-//auto logger = node->get_logger();
+const double pen_lift = 0.01; // 1 cm en mètres
 
-// Pose d'ancrage : origine du dessin (point u=0, v=0)
+// Pose d'ancrage : origine du dessin (u=0, v=0)
 const geometry_msgs::msg::Pose anchor_pose = move_group_interface.getCurrentPose().pose;
 
 for (std::size_t chunk_begin = 0; chunk_begin < points2d.size(); chunk_begin += chunk_size)
 {
   const std::size_t chunk_end = std::min(chunk_begin + chunk_size, points2d.size());
 
-  // Départ du prochain plan = état courant du robot
   move_group_interface.setStartStateToCurrentState();
 
   std::vector<geometry_msgs::msg::Pose> waypoints;
   waypoints.reserve((chunk_end - chunk_begin) + 1);
 
-  // 1) premier waypoint = pose courante (pour continuité / éviter un "saut" MoveIt)
+  // Continuité : départ = pose courante
   geometry_msgs::msg::Pose start_pose = move_group_interface.getCurrentPose().pose;
   waypoints.push_back(start_pose);
 
-  // 2) waypoints du segment = positions absolues par rapport à anchor_pose
   for (std::size_t i = chunk_begin; i < chunk_end; ++i)
   {
     geometry_msgs::msg::Pose p = anchor_pose;
+
+    // Coordonnées absolues du dessin
     p.position.x += points2d[i].u;
     p.position.z += points2d[i].v;
 
-    // (optionnel) si vous voulez conserver l'orientation de la pose courante :
-    // p.orientation = start_pose.orientation;
+    // Orientation fixe (souvent mieux pour dessiner)
+    p.orientation = anchor_pose.orientation;
+
+    // Stylo levé si pen == 0
+    if (!points2d[i].pen) {
+      p.position.y += pen_lift;   // <-- AXE À ADAPTER si besoin
+    }
 
     RCLCPP_INFO(logger, "[%zu] u=%.4f v=%.4f pen=%d",
                 i, points2d[i].u, points2d[i].v, points2d[i].pen ? 1 : 0);
@@ -219,6 +224,7 @@ for (std::size_t chunk_begin = 0; chunk_begin < points2d.size(); chunk_begin += 
     break;
   }
 }
+
 
   executor.cancel();
   spinner.join();
