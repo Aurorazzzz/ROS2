@@ -149,7 +149,8 @@ try {
   return 1;
 }
 
-  std::this_thread::sleep_for(std::chrono::milliseconds(200));
+RCLCPP_INFO(node->get_logger(), "Dodo");
+  std::this_thread::sleep_for(std::chrono::milliseconds(10000));
   // definir le départ du prochain plan = position actuel
   move_group_interface.setStartStateToCurrentState();
 
