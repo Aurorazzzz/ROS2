@@ -160,7 +160,7 @@ const std::size_t chunk_size = 10;     // à ajuster
 const double eef_step = 0.01;          // 1 cm (0.005 si vous voulez plus fin)
 const double jump_thresh = 0.0;
 
-auto logger = node->get_logger();
+//auto logger = node->get_logger();
 
 // Pose d'ancrage : origine du dessin (point u=0, v=0)
 const geometry_msgs::msg::Pose anchor_pose = move_group_interface.getCurrentPose().pose;
