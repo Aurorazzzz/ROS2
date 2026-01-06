@@ -35,9 +35,22 @@ ament_target_dependencies(
   "ament_index_cpp"
 )
 
+add_executable(dessine src/dessine.cpp)
+target_include_directories(dessine PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>)
+target_compile_features(dessine PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+ament_target_dependencies(
+  dessine
+  "moveit_ros_planning_interface"
+  "rclcpp"
+  "ament_index_cpp"
+)
+
 install(TARGETS 
 moveit_essaie
-triangle 
+triangle
+dessine 
   DESTINATION lib/${PROJECT_NAME})
 
 install(
