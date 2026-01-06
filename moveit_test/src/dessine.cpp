@@ -96,8 +96,8 @@ int main(int argc, char * argv[])
 
   move_group_interface.setPoseReferenceFrame("base_link");
   move_group_interface.setPlanningTime(5.0);
-  move_group_interface.setMaxVelocityScalingFactor(0.15);
-  move_group_interface.setMaxAccelerationScalingFactor(0.15);
+  move_group_interface.setMaxVelocityScalingFactor(0.05);
+  move_group_interface.setMaxAccelerationScalingFactor(0.05);
 
   // Laisser un peu de temps pour que le state monitor reçoive les premiers joint_states
   RCLCPP_INFO(logger, "Attente de l'état courant du robot...");
