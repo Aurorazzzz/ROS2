@@ -5,14 +5,21 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-# find dependencies
+# -----------------------------
+# Dependencies
+# -----------------------------
 find_package(ament_cmake REQUIRED)
 find_package(xacro REQUIRED)
-find_package(moveit_ros_planning_interface REQUIRED)
-find_package(moveit_core REQUIRED)                 # <-- AJOUTÉ (pour robot_trajectory + time_parameterization)
 find_package(rclcpp REQUIRED)
 find_package(ament_index_cpp REQUIRED)
 
+find_package(moveit_ros_planning_interface REQUIRED)
+find_package(moveit_core REQUIRED)
+find_package(moveit_trajectory_processing REQUIRED)   # <-- nécessaire pour iterative_parabolic_time_parameterization.h
+
+# -----------------------------
+# Executables
+# -----------------------------
 add_executable(moveit_essaie src/moveit_essaie.cpp)
 target_include_directories(moveit_essaie PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -20,8 +27,8 @@ target_include_directories(moveit_essaie PUBLIC
 target_compile_features(moveit_essaie PUBLIC c_std_99 cxx_std_17)
 ament_target_dependencies(
   moveit_essaie
-  "moveit_ros_planning_interface"
-  "rclcpp"
+  moveit_ros_planning_interface
+  rclcpp
 )
 
 add_executable(triangle src/triangle.cpp)
@@ -31,9 +38,9 @@ target_include_directories(triangle PUBLIC
 target_compile_features(triangle PUBLIC c_std_99 cxx_std_17)
 ament_target_dependencies(
   triangle
-  "moveit_ros_planning_interface"
-  "rclcpp"
-  "ament_index_cpp"
+  moveit_ros_planning_interface
+  rclcpp
+  ament_index_cpp
 )
 
 add_executable(dessine src/dessine.cpp)
@@ -43,9 +50,9 @@ target_include_directories(dessine PUBLIC
 target_compile_features(dessine PUBLIC c_std_99 cxx_std_17)
 ament_target_dependencies(
   dessine
-  "moveit_ros_planning_interface"
-  "rclcpp"
-  "ament_index_cpp"
+  moveit_ros_planning_interface
+  rclcpp
+  ament_index_cpp
 )
 
 add_executable(dessine2 src/dessine2.cpp)
@@ -55,12 +62,16 @@ target_include_directories(dessine2 PUBLIC
 target_compile_features(dessine2 PUBLIC c_std_99 cxx_std_17)
 ament_target_dependencies(
   dessine2
-  "moveit_ros_planning_interface"
-  "moveit_core"              # <-- AJOUTÉ (nécessaire pour les headers de retiming)
-  "rclcpp"
-  "ament_index_cpp"
+  moveit_ros_planning_interface
+  moveit_core
+  moveit_trajectory_processing
+  rclcpp
+  ament_index_cpp
 )
 
+# -----------------------------
+# Install
+# -----------------------------
 install(TARGETS
   moveit_essaie
   triangle
@@ -74,6 +85,9 @@ install(
   DESTINATION share/${PROJECT_NAME}/data
 )
 
+# -----------------------------
+# Tests / Lint
+# -----------------------------
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   set(ament_cmake_copyright_FOUND TRUE)
