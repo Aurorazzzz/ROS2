@@ -177,7 +177,7 @@ int main(int argc, char * argv[])
 
   // Petite pause (laisser tout se stabiliser)
   RCLCPP_INFO(logger, "Pause avant démarrage du dessin...");
-  std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+  std::this_thread::sleep_for(std::chrono::milliseconds(10000));
 
   move_group_interface.setStartStateToCurrentState();
 
