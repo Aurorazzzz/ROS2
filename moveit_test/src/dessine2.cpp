@@ -18,7 +18,7 @@
 
 // Retiming
 #include <moveit/robot_trajectory/robot_trajectory.h>
-#include <moveit/trajectory_processing/iterative_parabolic_time_parameterization.h>
+#include <moveit/trajectory_processing/iterative_time_parameterization.h>
 
 struct UVPen {
   double u{0.0};
