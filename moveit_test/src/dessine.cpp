@@ -96,8 +96,8 @@ int main(int argc, char * argv[])
 
   move_group_interface.setPoseReferenceFrame("base_link");
   move_group_interface.setPlanningTime(5.0);
-  move_group_interface.setMaxVelocityScalingFactor(0.05);
-  move_group_interface.setMaxAccelerationScalingFactor(0.05);
+  move_group_interface.setMaxVelocityScalingFactor(0.02);
+  move_group_interface.setMaxAccelerationScalingFactor(0.02);
 
   // Laisser un peu de temps pour que le state monitor reçoive les premiers joint_states
   RCLCPP_INFO(logger, "Attente de l'état courant du robot...");
@@ -157,8 +157,8 @@ RCLCPP_INFO(node->get_logger(), "Dodo");
   // -----------------------------
   //  Waypoints à partir de la pose courante
   // -----------------------------
-const std::size_t chunk_size = 10;
-const double eef_step = 0.01;
+const std::size_t chunk_size = 50;
+const double eef_step = 0.003;
 const double jump_thresh = 0.0;
 
 const double pen_lift = -0.01; // 1 cm en mètres
