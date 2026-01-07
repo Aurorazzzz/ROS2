@@ -14,17 +14,12 @@ find_package(rclcpp REQUIRED)
 find_package(ament_index_cpp REQUIRED)
 
 find_package(moveit_ros_planning_interface REQUIRED)
-find_package(moveit_core REQUIRED)
-find_package(moveit_trajectory_processing REQUIRED)   # <-- nécessaire pour iterative_parabolic_time_parameterization.h
+find_package(moveit_core REQUIRED)   # ✅ SUFFISANT pour trajectory_processing sur Humble
 
 # -----------------------------
 # Executables
 # -----------------------------
 add_executable(moveit_essaie src/moveit_essaie.cpp)
-target_include_directories(moveit_essaie PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
-target_compile_features(moveit_essaie PUBLIC c_std_99 cxx_std_17)
 ament_target_dependencies(
   moveit_essaie
   moveit_ros_planning_interface
@@ -32,10 +27,6 @@ ament_target_dependencies(
 )
 
 add_executable(triangle src/triangle.cpp)
-target_include_directories(triangle PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
-target_compile_features(triangle PUBLIC c_std_99 cxx_std_17)
 ament_target_dependencies(
   triangle
   moveit_ros_planning_interface
@@ -44,10 +35,6 @@ ament_target_dependencies(
 )
 
 add_executable(dessine src/dessine.cpp)
-target_include_directories(dessine PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
-target_compile_features(dessine PUBLIC c_std_99 cxx_std_17)
 ament_target_dependencies(
   dessine
   moveit_ros_planning_interface
@@ -56,15 +43,10 @@ ament_target_dependencies(
 )
 
 add_executable(dessine2 src/dessine2.cpp)
-target_include_directories(dessine2 PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
-target_compile_features(dessine2 PUBLIC c_std_99 cxx_std_17)
 ament_target_dependencies(
   dessine2
   moveit_ros_planning_interface
-  moveit_core
-  moveit_trajectory_processing
+  moveit_core          # ✅ contient iterative_parabolic_time_parameterization
   rclcpp
   ament_index_cpp
 )
