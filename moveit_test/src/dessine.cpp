@@ -157,8 +157,8 @@ RCLCPP_INFO(node->get_logger(), "Dodo");
   // -----------------------------
   //  Waypoints à partir de la pose courante
   // -----------------------------
-const std::size_t chunk_size = 50;
-const double eef_step = 0.003;
+const std::size_t chunk_size = 25;
+const double eef_step = 0.01;
 const double jump_thresh = 0.0;
 
 const double pen_lift = -0.01; // 1 cm en mètres
