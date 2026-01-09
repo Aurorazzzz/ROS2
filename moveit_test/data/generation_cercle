@@ -7,7 +7,7 @@ import math
 center_x = 0.0        # m
 center_y = 0.0        # m
 radius = 0.10         # 10 cm = 0.10 m
-num_points = 20       # nombre de points sur le cercle
+num_points = 40       # nombre de points sur le cercle
 
 output_file = "circle.csv"
 
