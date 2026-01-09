@@ -183,15 +183,15 @@ int main(int argc, char * argv[])
   // -----------------------------
   //  Réglages "CB3-safe" + séparation pen-up/pen-down
   // -----------------------------
-  const double pen_lift = -0.01;             // demandé (ne pas changer)
-  const std::size_t chunk_size = 8;          // goals plus petits
-  const double eef_step = 0.03;              // moins de points -> moins de charge
+  const double pen_lift = -0.01;             
+  const std::size_t chunk_size = 8;          
+  const double eef_step = 0.03;              
   const double jump_thresh = 0.0;
 
   const double retime_vel_scale   = 0.02;
   const double retime_accel_scale = 0.01;
 
-  const auto goal_pause = std::chrono::milliseconds(400); // baisse forte des drops
+  const auto goal_pause = std::chrono::milliseconds(400); 
 
   // Pose d'ancrage (origine du dessin)
   const geometry_msgs::msg::Pose anchor_pose = move_group_interface.getCurrentPose().pose;
@@ -217,7 +217,6 @@ int main(int argc, char * argv[])
     return p;
   };
 
-  // Exécuter un petit move cartésien (2 poses) + retiming
   auto execute_cartesian_to = [&](const geometry_msgs::msg::Pose& target) -> bool {
     move_group_interface.setStartStateToCurrentState();
 
@@ -253,9 +252,7 @@ int main(int argc, char * argv[])
     return true;
   };
 
-  // -----------------------------
-  //  Boucle : traits pen-down séparés, pen-up en petits moves
-  // -----------------------------
+
   std::size_t idx = 0;
   while (idx < points2d.size())
   {

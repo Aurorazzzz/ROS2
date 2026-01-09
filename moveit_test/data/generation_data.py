@@ -10,18 +10,18 @@ import matplotlib.pyplot as plt
 # =========================
 
 # Centre du dessin sur le tableau (dans VOS unités)
-# Exemple : 0.00, 0.00 si votre repère est centré
+# Exemple : 0.00, 0.00 si repère est centré
 CENTER_U = 0.00
 CENTER_V = 0.00
 
 # Taille du dessin (dans VOS unités)
 # -> le dessin sera contenu dans un carré/rectangle de cette taille en gardant le ratio
-# Exemple : 0.20 = 20 cm si vos unités sont en mètres
+# Exemple : 0.20 = 20 cm
 DRAW_WIDTH  = 0.30
 DRAW_HEIGHT = 0.30
 
-# Échantillonnage : espacement entre points successifs (dans VOS unités)
-POINT_SPACING = 0.005  # 2 mm si unités = mètres
+# Échantillonnage : espacement entre points successifs 
+POINT_SPACING = 0.005  # 2 mm 
 
 # Seuils pour l'extraction des contours (Canny)
 CANNY_T1 =  60
@@ -234,7 +234,7 @@ def preview(rows):
 # =========================
 
 def main():
-    image_path = "moveit_test/data/input.png"      # <-- mettez ici votre image
+    image_path = "moveit_test/data/input.png"      # <-- mettre ici image
     out_csv = "moveit_test/data/output.csv"
 
     paths = image_to_paths(image_path)
