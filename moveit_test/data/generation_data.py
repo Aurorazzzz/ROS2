@@ -28,7 +28,7 @@ CANNY_T1 = 80
 CANNY_T2 = 160
 
 # Simplification de contours : plus grand => moins de points (en pixels, avant mise à l'échelle)
-APPROX_EPS_PIX = 4
+APPROX_EPS_PIX = 15
 
 # =========================
 # UTILITAIRES
