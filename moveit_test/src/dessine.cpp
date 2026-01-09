@@ -15,6 +15,24 @@
 #include <ament_index_cpp/get_package_share_directory.hpp>
 
 
+/*
+============================================================
+Description :
+Ce programme contrôle un UR5 à l’aide de ROS 2 et de MoveIt afin d’exécuter 
+une trajectoire cartésienne définie par une série de poses. Il charge et traite des données de trajectoire, 
+segmente le mouvement en portions successives, planifie chaque segment et les exécute. 
+
+Auteur :
+Binder Aurore, Schmitt Théo, Hatton Axel
+INSA de Strasbourg - 5ème année
+
+Dernière modification :
+2024-09-10
+
+============================================================
+*/
+
+
 
 struct UVPen {
   double u{0.0};

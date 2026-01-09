@@ -24,11 +24,11 @@ DRAW_HEIGHT = 0.30
 POINT_SPACING = 0.005  # 2 mm si unités = mètres
 
 # Seuils pour l'extraction des contours (Canny)
-CANNY_T1 = 30
-CANNY_T2 = 250
+CANNY_T1 =  60
+CANNY_T2 =150
 
 # Simplification de contours : plus grand => moins de points (en pixels, avant mise à l'échelle)
-APPROX_EPS_PIX = 5
+APPROX_EPS_PIX = 8
 
 # =========================
 # UTILITAIRES
