@@ -124,7 +124,7 @@ int main(int argc, char * argv[])
   // Import des points du csv :
 
 auto share = ament_index_cpp::get_package_share_directory("moveit_test");
-auto csv_path = share + "/data/output.csv";
+auto csv_path = share + "/data/waypoint_triangle.csv";
 if (csv_path.empty()) {
 RCLCPP_ERROR(node->get_logger(), "Paramètre 'csv_path' vide. Exemple: --ros-args -p csv_path:=/chemin/triangle.csv");
 return 1;
@@ -150,6 +150,10 @@ try {
 }
 
   std::this_thread::sleep_for(std::chrono::milliseconds(200));
+
+  RCLCPP_INFO(node->get_logger(), "Dodo");
+  std::this_thread::sleep_for(std::chrono::milliseconds(10000));
+  
   // definir le départ du prochain plan = position actuel
   move_group_interface.setStartStateToCurrentState();
 
