@@ -1,0 +1,35 @@
+import csv
+import math
+
+# =========================
+# Paramètres du cercle
+# =========================
+center_x = 0.0        # m
+center_y = 0.0        # m
+radius = 0.10         # 10 cm = 0.10 m
+num_points = 20       # nombre de points sur le cercle
+
+output_file = "circle.csv"
+
+# =========================
+# Génération du cercle
+# =========================
+points = []
+
+for i in range(num_points + 1):
+    theta = 2.0 * math.pi * i / num_points
+
+    x = center_x + radius * math.cos(theta)
+    y = center_y + radius * math.sin(theta)
+
+    points.append((x, y, 1))  # pen-down
+
+# =========================
+# Écriture du CSV
+# =========================
+with open(output_file, mode='w', newline='') as csv_file:
+    writer = csv.writer(csv_file)
+    writer.writerow(["u", "v", "pen"])
+    writer.writerows(points)
+
+print(f"CSV généré avec succès : {output_file}")
